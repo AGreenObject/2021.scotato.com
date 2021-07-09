@@ -4,6 +4,10 @@ import colors from './colors.json'
 
 const theme = extendTheme({
   colors,
+  fonts: {
+    heading: 'ui-rounded, "SF Pro Rounded", system-ui, san-serif',
+    body: 'ui-rounded, "SF Pro Rounded", system-ui, san-serif',
+  },
   styles: {
     global: (props) => ({
       "html, body": {

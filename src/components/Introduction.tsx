@@ -1,4 +1,7 @@
-import { Stack, Text, Link } from "@chakra-ui/react";
+import { Stack, Heading, Text, Link, Avatar } from "@chakra-ui/react";
+import Coin from './Coin'
+import avatarHuman from '../images/scotato-human-avatar.png'
+import avatarDigital from '../images/scotato-digital-avatar.png'
 
 interface ReferenceProps {
   to: string;
@@ -12,19 +15,21 @@ const Reference = ({ to, text }: ReferenceProps) => (
 );
 
 const Introduction = () => (
-  <Stack mb={2} p={8} spacing={4}>
-    <Stack spacing={0}>
-      <Text fontWeight={700} fontSize={24} lineHeight={1}>
-        Scott Dodge
-      </Text>
+  <Stack mb={2} px={4} py={6} spacing={4}>
+    <Stack direction="row">
+      <Coin
+        front={<Avatar name="Scott Dodge" width="48px" height="48px" src={avatarHuman} />}
+        back={<Avatar name="@scotato" width="48px" height="48px" src={avatarDigital} />}
+      />
+      <Stack spacing={0} justifyContent="center">
+        <Heading fontWeight={700} fontSize={24} lineHeight={1}>
+          Scott Dodge
+        </Heading>
 
-      <Text fontSize={12} color="gray.500">
-        @scotato
-      </Text>
-
-      <Text>
-        Software Design & Engineering, Web3
-      </Text>
+        <Text fontSize={14} color="gray.500" lineHeight={1}>
+          @scotato
+        </Text>
+      </Stack>
     </Stack>
 
     <Text>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, useColorModeValue } from "@chakra-ui/react";
-import { ReactComponent as FigmaLogo } from "../logos/figma-logo.svg";
-import { ReactComponent as ReactLogo } from "../logos/react-logo.svg";
+import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
+import { ReactComponent as ReactLogo } from "../images/react-logo.svg";
 import { LinkButton } from "./Button";
 
 const Navigation = () => {
