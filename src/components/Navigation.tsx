@@ -1,4 +1,3 @@
-import React from "react";
 import { Stack, useColorModeValue } from "@chakra-ui/react";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as ReactLogo } from "../images/react-logo.svg";
@@ -18,13 +17,13 @@ const Navigation = () => {
         height={10}
         bg={bg}
         _hover={{ bg: bgHover }}
-        to="https://www.figma.com/community/plugin/930173909910797614/Squircle"
+        to="/gnomies"
       >
-        Figma Plugin
+        Gnomies
       </LinkButton>
       <LinkButton
         leftIcon={<ReactLogo width={24} height={24} />}
-        to="http://npmjs.com/package/@scotato/react-squircle"
+        to="/habanero"
         justifyContent="flex-start"
         fontWeight={400}
         px={3}
@@ -32,7 +31,31 @@ const Navigation = () => {
         _hover={{ bg: bgHover }}
         height={10}
       >
-        React Component
+        Habanero
+      </LinkButton>
+      <LinkButton
+        leftIcon={<ReactLogo width={24} height={24} />}
+        to="squircle"
+        justifyContent="flex-start"
+        fontWeight={400}
+        px={3}
+        bg={bg}
+        _hover={{ bg: bgHover }}
+        height={10}
+      >
+        Squircle
+      </LinkButton>
+      <LinkButton
+        leftIcon={<ReactLogo width={24} height={24} />}
+        to="/sleeper"
+        justifyContent="flex-start"
+        fontWeight={400}
+        px={3}
+        bg={bg}
+        _hover={{ bg: bgHover }}
+        height={10}
+      >
+        Sleeper
       </LinkButton>
     </Stack>
   );

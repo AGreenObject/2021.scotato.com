@@ -55,17 +55,17 @@ const About = () => (
       <Section
         title="About"
         body={(
-          <Stack spacing={4}>
+          <Stack spacing={3}>
             <Text>
-              👋 Hey! I design and build digital products in Portland, Oregon. This site has some of my work.
+              Hey! I design and build digital products in Portland, Oregon. This site has some of my work.
             </Text>
 
             <Text>
-              Send me a message on <Reference to="https://twitter.com/scotato" text="twitter" />!
+              Send me a message on <Reference to="https://twitter.com/scotato" text="Twitter" />!
             </Text>
 
             <Text>
-            The source code for this site is available on <Reference to="https://github.com/scotato/scotato.com" text="github" />.
+            The source code for this site is available on <Reference to="https://github.com/scotato/scotato.com" text="GitHub" />.
             </Text>
           </Stack>
         )}
@@ -76,11 +76,11 @@ const About = () => (
         body={(
           <List spacing={3}>
             <ListItem>
-              <ListIcon as={FontAwesomeIcon} icon={faPencilRuler} color="orange.300" fontSize={20} fixedWidth />
+              <ListIcon as={FontAwesomeIcon} icon={faPencilRuler} color="orange.400" fontSize={20} fixedWidth />
               Product Design
             </ListItem>
             <ListItem>
-              <ListIcon as={FontAwesomeIcon} icon={faTools} color="purple.300" fontSize={20} fixedWidth />
+              <ListIcon as={FontAwesomeIcon} icon={faTools} color="purple.400" fontSize={20} fixedWidth />
               Software Engineering
             </ListItem>
           </List>
@@ -92,11 +92,11 @@ const About = () => (
         body={(
           <List spacing={3}>
             <ListItem>
-              <ListIcon as={FontAwesomeIcon} icon={faJs} color="yellow.300" fontSize={20} fixedWidth />
+              <ListIcon as={FontAwesomeIcon} icon={faJs} color="yellow.400" fontSize={20} fixedWidth />
               JavaScript / TypeScript
             </ListItem>
             <ListItem>
-              <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.300" fontSize={20} fixedWidth />
+              <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
               React
             </ListItem>
             <ListItem>
@@ -104,7 +104,7 @@ const About = () => (
               GraphQL
             </ListItem>
             <ListItem>
-              <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.300" fontSize={20} fixedWidth />
+              <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.400" fontSize={20} fixedWidth />
               Node.js
             </ListItem>
             <ListItem>

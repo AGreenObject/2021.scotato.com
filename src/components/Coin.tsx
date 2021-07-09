@@ -35,7 +35,6 @@ const CoinEdge = () => {
           height={`${EDGEFACELENGTH}px`}
           width={`${THICKNESS}px`}
           background={lightenDarkenColor(edgeColor, -((i - EDGEFACES / 2) * (i - EDGEFACES / 2)) / (EDGEFACES * EDGEFACES / 4) * 100 * 0.7)}
-          // background={lightenDarkenColor(edgeColor, i / EDGEFACES * 0.5)}
           transform={` 
             translateY(${DIAMETER / 2 - EDGEFACELENGTH / 2}px)
             translateX(${DIAMETER / 2 - THICKNESS / 2}px)

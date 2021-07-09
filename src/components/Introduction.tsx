@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import { Stack, Heading, Text, Avatar } from "@chakra-ui/react";
 import Coin from './Coin'
 import avatarHuman from '../images/scotato-human-avatar.png'
 import avatarDigital from '../images/scotato-digital-avatar.png'
 
 const Introduction = () => (
-  <Stack px={4} py={5} spacing={4}>
+  <Stack as={Link} px={4} py={5} spacing={4} to="/">
     <Stack direction="row">
       <Coin
         front={<Avatar name="Scott Dodge" width="48px" height="48px" src={avatarHuman} />}

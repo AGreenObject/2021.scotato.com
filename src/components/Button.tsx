@@ -1,4 +1,4 @@
-import React from "react";
+import { Link, LinkProps } from "react-router-dom";
 import { SquircleMask } from "@scotato/react-squircle";
 import { Button, ButtonProps, useColorModeValue } from "@chakra-ui/react";
 
@@ -10,26 +10,17 @@ function SquircleButton(props: ButtonProps) {
   );
 }
 
-interface LinkButtonProps {
-  to: string;
-  download?: string;
-}
-
-export function LinkButton(props: ButtonProps & LinkButtonProps) {
-  const { to, download, ...rest } = props;
+export function LinkButton(props: ButtonProps & LinkProps) {
   const bg = useColorModeValue("blue.100", "blue.900");
 
   return (
     <SquircleMask p1={4} p2={16}>
       <Button
-        as="a"
+        as={Link}
         borderRadius={0}
         width="100%"
-        target="_blank"
-        href={to}
-        download={download}
         _focus={{ bg }}
-        {...rest}
+        {...props}
       />
     </SquircleMask>
   );
