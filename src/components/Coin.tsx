@@ -8,15 +8,14 @@ const TIMING = 8 //s
 const EDGEFACES = 80
 const EDGEFACELENGTH = 3.14 * DIAMETER / EDGEFACES
 
-
 const spin = keyframes`
   from { transform: perspective(1000px) rotateY(0deg); }
   to { transform: perspective(1000px) rotateY(360deg); }
 `
 
 const shine = keyframes`
-  0%, 15% { transform: translateY($coin-diameter*2) rotate(-40deg); }
-  50% { transform: translateY(-$coin-diameter) rotate(-40deg); }
+  0%, 15% { transform: translateY(${DIAMETER * 2}px) rotate(-40deg); }
+  50% { transform: translateY(-${DIAMETER}px) rotate(-40deg); }
 `
 
 interface CoinProps {
@@ -25,7 +24,8 @@ interface CoinProps {
 }
 
 const CoinEdge = () => {
-  const edgeColor = useColorModeValue('#AAAAAA', '#2f2f2f');
+  const edgeColor = useColorModeValue('#AAAAAA', '#505050');
+  
   return (
     <Box>
       {Array.from({length: EDGEFACES}, (v, i) => i).map((i) =>
@@ -34,7 +34,8 @@ const CoinEdge = () => {
           position="absolute"
           height={`${EDGEFACELENGTH}px`}
           width={`${THICKNESS}px`}
-          background={lightenDarkenColor(edgeColor, ((i - EDGEFACES / 2) * (i - EDGEFACES / 2)) / (EDGEFACES * EDGEFACES / 4) * 100 * 0.7)}
+          background={lightenDarkenColor(edgeColor, -((i - EDGEFACES / 2) * (i - EDGEFACES / 2)) / (EDGEFACES * EDGEFACES / 4) * 100 * 0.7)}
+          // background={lightenDarkenColor(edgeColor, i / EDGEFACES * 0.5)}
           transform={` 
             translateY(${DIAMETER / 2 - EDGEFACELENGTH / 2}px)
             translateX(${DIAMETER / 2 - THICKNESS / 2}px)
@@ -45,22 +46,6 @@ const CoinEdge = () => {
         />
       )}
     </Box>
-  )
-}
-
-const CoinShadow = () => {
-  const shadowColor = useColorModeValue('#000', '#FFF');
-  return (
-    <Box 
-      position="absolute"
-      width={`${DIAMETER}px`}
-      height={`${THICKNESS}px`}
-      border-radius='50%'
-      background='gray.500'
-      boxShadow={`0 0 ${THICKNESS * 5}px ${THICKNESS * 5}px ${shadowColor}`}
-      opacity={0.125}
-      transform={`rotateX(90deg) translateZ(-${DIAMETER * 1.1}px) scale(.5)`}
-    />
   )
 }
 
@@ -107,7 +92,6 @@ const Coin = ({ front, back }: CoinProps) => (
       transform={`translateZ(-${THICKNESS / 2}px) rotateY(180deg)`}
       children={back}
     />
-    <CoinShadow />
   </Box>
 );
 
