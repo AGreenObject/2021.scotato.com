@@ -4,12 +4,13 @@ import banner from '../images/habanero-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Flex, Stack, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
+import { Flex, Stack, Text, Link, List, ListItem, ListIcon, Icon, useColorModeValue } from "@chakra-ui/react";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as PostgreSQLLogo } from "../images/postgresql-logo.svg";
-import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faReact, faNodeJs, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 
@@ -25,7 +26,7 @@ export const HABANERO: Project = {
   title: 'Habanero',
   description: 'Collect and use recipes from the web',
   date: 'March 2021',
-  url: 'https://habanero.red',
+  url: 'https://Habanero.red',
   repo: 'https://github.com/scotato/habanero'
 }
 
@@ -58,6 +59,8 @@ export function HabaneroPage() {
 }
 
 export function HabaneroSidebar() {
+  const githubColor = useColorModeValue("gray.900", "gray.100")
+  
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -101,6 +104,23 @@ export function HabaneroSidebar() {
                 Figma
               </ListItem>
             </List>
+          )}
+        />
+
+        <Section
+          title="Links"
+          body={(
+            <Stack spacing={3}>
+              <Link href={HABANERO.url} target="_blank" display="flex" p={1}>
+                <Icon as={FontAwesomeIcon} icon={faLink} color="blue.500" fontSize={20} fixedWidth />
+                <Text ml={2}>{HABANERO.url.replace('https://', '')}</Text>
+              </Link>
+
+              <Link href={HABANERO.repo} target="_blank" display="flex" p={1}>
+                <Icon as={FontAwesomeIcon} icon={faGithub} color={githubColor} fontSize={20} fixedWidth />
+                <Text ml={2}>Source Code</Text>
+              </Link>
+            </Stack>
           )}
         />
 

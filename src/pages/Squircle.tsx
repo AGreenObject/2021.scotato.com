@@ -4,10 +4,11 @@ import banner from '../images/squircle-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Flex, Stack, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
+import { Flex, Stack, Text, Link, List, ListItem, ListIcon, Icon, useColorModeValue } from "@chakra-ui/react";
 import { ReactComponent as SvelteLogo } from "../images/svelte-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
-import { faReact, faNpm } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faNpm, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 
@@ -24,7 +25,7 @@ export const SQUIRCLE: Project = {
   title: 'Squircle',
   description: 'Create squircles and superellipses in Figma',
   date: 'March 2021',
-  url: 'https://squircle.app',
+  url: 'https://Squircle.app',
   repo: 'https://github.com/scotato/squircle'
 }
 
@@ -57,6 +58,8 @@ export function SquirclePage() {
 }
 
 export function SquircleSidebar() {
+  const githubColor = useColorModeValue("gray.900", "gray.100")
+  
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -92,6 +95,23 @@ export function SquircleSidebar() {
                 Figma
               </ListItem>
             </List>
+          )}
+        />
+
+        <Section
+          title="Links"
+          body={(
+            <Stack spacing={3}>
+              <Link href={SQUIRCLE.url} target="_blank" display="flex" p={1}>
+                <Icon as={FontAwesomeIcon} icon={faLink} color="blue.500" fontSize={20} fixedWidth />
+                <Text ml={2}>{SQUIRCLE.url.replace('https://', '')}</Text>
+              </Link>
+
+              <Link href={SQUIRCLE.repo} target="_blank" display="flex" p={1}>
+                <Icon as={FontAwesomeIcon} icon={faGithub} color={githubColor} fontSize={20} fixedWidth />
+                <Text ml={2}>Source Code</Text>
+              </Link>
+            </Stack>
           )}
         />
 

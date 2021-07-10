@@ -25,7 +25,7 @@ interface SectionProps {
 export function Section ({title, body} : SectionProps) {
   return (
     <Stack spacing={4}>
-      <Heading fontWeight={700} fontSize={24} lineHeight={1}>
+      <Heading fontWeight={700} fontSize={20} lineHeight={1}>
         {title}
       </Heading>
   
