@@ -26,7 +26,7 @@ export const GNOMIES: Project = {
   title: 'Gnomies',
   description: 'Unique collectible NFT avatars powered by Ethereum',
   date: 'March 2021',
-  url: 'https://Gnomies.app',
+  url: 'https://gnomies.app',
   repo: 'https://github.com/scotato/gnomies'
 }
 

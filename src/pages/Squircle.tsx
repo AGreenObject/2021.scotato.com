@@ -4,14 +4,13 @@ import banner from '../images/squircle-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Flex, Stack, Text, Link, List, ListItem, ListIcon, Icon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { ReactComponent as SvelteLogo } from "../images/svelte-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
-import { faReact, faNpm, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faReact, faNpm } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
-
+import { ExternalLinkButton } from '../components/Button'
 
 export const SQUIRCLE: Project = {
   id: 'squircle',
@@ -25,8 +24,8 @@ export const SQUIRCLE: Project = {
   title: 'Squircle',
   description: 'Create squircles and superellipses in Figma',
   date: 'March 2021',
-  url: 'https://Squircle.app',
-  repo: 'https://github.com/scotato/squircle'
+  url: 'https://squircle.club',
+  repo: 'https://github.com/scotato/figma-squircle'
 }
 
 export function SquircleCard() {
@@ -45,7 +44,7 @@ export function SquircleCard() {
 
 export function SquirclePage() {
   return (
-    <Stack p={[8, 16]} spacing={[4, 12]} mx="auto" maxW={960}>
+    <Stack p={[8, 16]} spacing={[4, 6]} mx="auto" maxW={960}>
       <Detail
         title={SQUIRCLE.title}
         description={SQUIRCLE.description}
@@ -53,13 +52,29 @@ export function SquirclePage() {
         iconAlt={SQUIRCLE.iconAlt}
         status={SQUIRCLE.status}
       />
+
+      <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
+        <ExternalLinkButton href='https://www.figma.com/community/plugin/930173909910797614/Squircle' bg="purple.500">
+          Figma Plugin
+        </ExternalLinkButton>
+        <ExternalLinkButton href='http://npmjs.com/package/@scotato/react-squircle' bg="red.500">
+          NPM Module
+        </ExternalLinkButton>
+      </Grid>
+
+      <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
+        <ExternalLinkButton href={SQUIRCLE.url} bg="blue.500">
+          Web App
+        </ExternalLinkButton>
+        <ExternalLinkButton href={SQUIRCLE.repo} bg="gray.500">
+          Source Code
+        </ExternalLinkButton>
+      </Grid>
     </Stack>
   )
 }
 
 export function SquircleSidebar() {
-  const githubColor = useColorModeValue("gray.900", "gray.100")
-  
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -95,23 +110,6 @@ export function SquircleSidebar() {
                 Figma
               </ListItem>
             </List>
-          )}
-        />
-
-        <Section
-          title="Links"
-          body={(
-            <Stack spacing={3}>
-              <Link href={SQUIRCLE.url} target="_blank" display="flex" p={1}>
-                <Icon as={FontAwesomeIcon} icon={faLink} color="blue.500" fontSize={20} fixedWidth />
-                <Text ml={2}>{SQUIRCLE.url.replace('https://', '')}</Text>
-              </Link>
-
-              <Link href={SQUIRCLE.repo} target="_blank" display="flex" p={1}>
-                <Icon as={FontAwesomeIcon} icon={faGithub} color={githubColor} fontSize={20} fixedWidth />
-                <Text ml={2}>Source Code</Text>
-              </Link>
-            </Stack>
           )}
         />
 

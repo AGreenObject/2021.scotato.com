@@ -19,8 +19,14 @@ function hoverColor (color?: string) {
       return 'red.600'
     case 'yellow.500':
       return 'yellow.600'
+    case 'orange.500':
+      return 'orange.600'
     case 'green.500':
       return 'green.600'
+    case 'pink.500':
+      return 'pink.600'
+    case 'purple.500':
+      return 'purple.600'
     case 'gray.500':
     default:
       return 'gray.600'
@@ -41,8 +47,7 @@ export function ExternalLinkButton(props: ButtonProps & LinkProps) {
           target="_blank"
           _focus={{ bg }}
           _hover={{ bg, textDecoration: 'none' }}
-          px={16}
-          py={6}
+          p={6}
           fontSize={18}
           color={color}
           {...props}
