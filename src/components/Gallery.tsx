@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Grid, Stack, Image, useColorModeValue } from "@chakra-ui/react";
 import { SquircleMask } from "@scotato/react-squircle";
 import Button from './Button'
 import AspectRatio from './AspectRatio'
+import { Link, Grid,  Stack,  Image,  useColorModeValue } from "@chakra-ui/react";
 
 interface GalleryProps {
   images: string[];
@@ -14,9 +14,11 @@ const Gallery = ({ images }: GalleryProps) => {
   const activeImage = images[activeIndex]
 
   return (
-    <SquircleMask p1={8} p2={48} style={{display: 'flex'}}>
+    <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
       <Stack spacing={0} bg={bg} flexGrow={1}>
-        <Image bg="gray.500" src={activeImage} fallback={<AspectRatio ratio={1280 / 800} />} />
+        <Link href={activeImage} target="_blank">
+          <Image bg="gray.500" src={activeImage} fallback={<AspectRatio ratio={1280 / 800} />} />
+        </Link>
         <Grid
           p={4}
           gridColumnGap="16px"
