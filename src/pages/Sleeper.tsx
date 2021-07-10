@@ -1,4 +1,5 @@
 import Card from '../components/Card'
+import Gallery from '../components/Gallery'
 import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
@@ -33,6 +34,9 @@ export function SleeperPage() {
         iconAlt={SLEEPER.iconAlt}
         status={SLEEPER.status}
       />
+
+      <Gallery images={SLEEPER.gallery} />
+
       <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
        <ExternalLinkButton href={SLEEPER.url} bg="blue.500">
          Web App
