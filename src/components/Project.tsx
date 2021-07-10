@@ -1,4 +1,4 @@
-import { faCheckCircle, faExclamationTriangle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCheckCircle, faExclamationTriangle, faPauseCircle } from "@fortawesome/free-solid-svg-icons";
 import { Box, Stack, Text } from "@chakra-ui/react";
 import { Section } from '../components/Sidebar'
 
@@ -21,7 +21,7 @@ export interface Project {
 export enum ProjectStatus {
   Production = "Live",
   Development = "In Development",
-  Abandoned = "Abandoned"
+  Hold = "On Hold"
 }
 
 export interface ProjectStatusSectionProps {
@@ -50,8 +50,8 @@ export function colorForStatus (status: ProjectStatus) {
       return 'green.500'
     case ProjectStatus.Development:
       return 'yellow.500'
-    case ProjectStatus.Abandoned:
-      return 'red.500'
+    case ProjectStatus.Hold:
+      return 'gray.500'
   }
 }
 
@@ -61,8 +61,8 @@ export function iconForStatus (status: ProjectStatus) {
       return faCheckCircle
     case ProjectStatus.Development:
       return faExclamationTriangle
-    case ProjectStatus.Abandoned:
-      return faExclamationCircle
+    case ProjectStatus.Hold:
+      return faPauseCircle
   }
 }
 
@@ -70,7 +70,7 @@ export function textForStatus (status: ProjectStatus) {
   switch (status) {
     case ProjectStatus.Development:
     case ProjectStatus.Production:
-    case ProjectStatus.Abandoned:
+    case ProjectStatus.Hold:
       return "is currently"
   }
 }

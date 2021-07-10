@@ -14,6 +14,7 @@ import {
   faMoon,
   faSun
 } from "@fortawesome/free-solid-svg-icons";
+import Hoverable from './Hoverable'
 
 
 const MoonIcon = () => <FontAwesomeIcon icon={faMoon} />
@@ -37,44 +38,55 @@ export const Actions = () => {
       sx={{ path: { fill: "currentColor" } }}
       mt="auto"
     >
-      <IconButton
-        aria-label={colorModeLabel}
-        icon={colorModeIcon}
-        onClick={toggleColorMode}
-        bg={bg}
-        _hover={{ bg: bgHover }}
-        fontSize="20px"
-      />
-      <IconButton
-        as="a"
-        href="https://github.com/scotato"
-        target="_blank"
-        aria-label="GitHub"
-        icon={<FontAwesomeIcon icon={faGithub} />}
-        bg={bg}
-        _hover={{ bg: bgHover }}
-        fontSize="22px"
-      />
-      <IconButton
-        as="a"
-        href="https://twitter.com/scotato"
-        target="_blank"
-        aria-label="Twitter"
-        icon={<FontAwesomeIcon icon={faTwitter} />}
-        bg={bg}
-        _hover={{ bg: bgHover }}
-        fontSize="22px"
-      />
-      <IconButton
-        as="a"
-        href="https://rainbow.me/scotato.eth"
-        target="_blank"
-        aria-label="Ethereum"
-        icon={<FontAwesomeIcon icon={faEthereum} />}
-        bg={bg}
-        _hover={{ bg: bgHover }}
-        fontSize="22px"
-      />
+      <Hoverable whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <IconButton
+          aria-label={colorModeLabel}
+          icon={colorModeIcon}
+          onClick={toggleColorMode}
+          bg={bg}
+          _hover={{ bg: bgHover }}
+          fontSize="20px"
+        />
+      </Hoverable>
+  
+      <Hoverable whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <IconButton
+          as="a"
+          href="https://github.com/scotato"
+          target="_blank"
+          aria-label="GitHub"
+          icon={<FontAwesomeIcon icon={faGithub} />}
+          bg={bg}
+          _hover={{ bg: bgHover }}
+          fontSize="22px"
+        />
+      </Hoverable>
+      
+      <Hoverable whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <IconButton
+          as="a"
+          href="https://twitter.com/scotato"
+          target="_blank"
+          aria-label="Twitter"
+          icon={<FontAwesomeIcon icon={faTwitter} />}
+          bg={bg}
+          _hover={{ bg: bgHover }}
+          fontSize="22px"
+        />
+      </Hoverable>
+      
+      <Hoverable whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <IconButton
+          as="a"
+          href="https://rainbow.me/scotato.eth"
+          target="_blank"
+          aria-label="Ethereum"
+          icon={<FontAwesomeIcon icon={faEthereum} />}
+          bg={bg}
+          _hover={{ bg: bgHover }}
+          fontSize="22px"
+        />
+      </Hoverable>
     </Stack>
   );
 };

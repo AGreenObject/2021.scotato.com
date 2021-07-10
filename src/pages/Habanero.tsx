@@ -16,7 +16,7 @@ import { Section } from '../components/Sidebar'
 
 export const HABANERO: Project = {
   id: 'habanero',
-  status: ProjectStatus.Abandoned,
+  status: ProjectStatus.Hold,
   banner,
   bannerAlt: 'Habanero Banner',
   iconSmall: <AppIconSmall Icon={AppIcon} />,
@@ -24,7 +24,7 @@ export const HABANERO: Project = {
   iconLarge: <AppIconLarge Icon={AppIcon} />,
   iconAlt: 'Habanero App Icon',
   title: 'Habanero',
-  description: 'Collect and use recipes from the web',
+  description: 'Discover and collect recipes from the web',
   date: 'March 2021',
   url: 'https://Habanero.red',
   repo: 'https://github.com/scotato/habanero'

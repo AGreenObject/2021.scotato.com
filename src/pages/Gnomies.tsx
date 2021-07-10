@@ -1,5 +1,5 @@
 import { ReactComponent as AppIcon } from "../images/gnomies-logo.svg"
-import { Flex, Stack, Text, List, Link, ListItem, ListIcon, Icon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import Card from '../components/Card'
 import banner from '../images/gnomies-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
@@ -8,11 +8,11 @@ import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
-import { faReact, faNodeJs, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
+import { ExternalLinkButton } from '../components/Button'
 
 export const GNOMIES: Project = {
   id: 'gnomies',
@@ -46,7 +46,7 @@ export function GnomiesCard() {
 
 export function GnomiesPage() {
   return (
-    <Stack p={[8, 16]} spacing={[4, 12]} mx="auto" maxW={960}>
+    <Stack p={[8, 16]} spacing={[4, 6]} mx="auto" maxW={960}>
       <Detail
         title={GNOMIES.title}
         description={GNOMIES.description}
@@ -54,13 +54,19 @@ export function GnomiesPage() {
         iconAlt={GNOMIES.iconAlt}
         status={GNOMIES.status}
       />
+      <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
+       <ExternalLinkButton href={GNOMIES.url} bg="blue.500">
+         Web App
+      </ExternalLinkButton>
+      <ExternalLinkButton href={GNOMIES.repo} bg="gray.500">
+         Source Code
+      </ExternalLinkButton>
+      </Grid>
     </Stack>
   )
 }
 
 export function GnomiesSidebar() {
-  const githubColor = useColorModeValue("gray.900", "gray.100")
-
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -104,23 +110,6 @@ export function GnomiesSidebar() {
                 Web3
               </ListItem>
             </List>
-          )}
-        />
-
-        <Section
-          title="Links"
-          body={(
-            <Stack spacing={3}>
-              <Link href={GNOMIES.url} target="_blank" display="flex" p={1}>
-                <Icon as={FontAwesomeIcon} icon={faLink} color="blue.500" fontSize={20} fixedWidth />
-                <Text ml={2}>{GNOMIES.url.replace('https://', '')}</Text>
-              </Link>
-
-              <Link href={GNOMIES.repo} target="_blank" display="flex" p={1}>
-                <Icon as={FontAwesomeIcon} icon={faGithub} color={githubColor} fontSize={20} fixedWidth />
-                <Text ml={2}>Source Code</Text>
-              </Link>
-            </Stack>
           )}
         />
 
