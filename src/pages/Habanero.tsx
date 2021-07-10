@@ -28,7 +28,7 @@ export function HabaneroCard() {
 
 export function HabaneroPage() {
   return (
-    <Stack p={[8, 16]} spacing={[4, 6]} mx="auto" maxW={960}>
+    <Stack p={[8, 12]} spacing={[4, 6]} mx="auto" maxW={960}>
       <Detail
         title={HABANERO.title}
         description={HABANERO.description}

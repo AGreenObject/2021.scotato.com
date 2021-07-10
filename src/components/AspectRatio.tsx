@@ -16,13 +16,12 @@ const AspectRatio = ({ ratio = 2 / 1, ...props }: AspectRatioProps & BoxProps) =
       display="grid"
       placeItems="center"
       paddingBottom={`${1 / ratio * 100}%`}
-      fontSize="750%"
       color={iconColor}
       bg={bg}
       {...props}
     >
       <Box position="absolute">
-        <FontAwesomeIcon icon={faImage} />
+        <FontAwesomeIcon icon={faImage} size="2x" />
       </Box>
     </Box>
   );

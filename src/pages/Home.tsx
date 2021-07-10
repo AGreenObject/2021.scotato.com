@@ -28,7 +28,7 @@ const AnimatedLink = (props: AnimatedLinkProps) => (
 
 export function HomePage() {
   return (
-    <Stack p={[8, 16]} spacing={[4, 12]} mx="auto" maxW={960}>
+    <Stack p={[8, 12]} spacing={[4, 12]} mx="auto" maxW={960}>
       <AnimatedLink to="/gnomies">
         <GnomiesCard />
       </AnimatedLink>
