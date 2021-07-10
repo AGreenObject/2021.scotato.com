@@ -1,8 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/squircle-logo.svg"
 import Card from '../components/Card'
-import banner from '../images/squircle-banner.png'
-import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
-import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
+import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { ReactComponent as SvelteLogo } from "../images/svelte-logo.svg";
@@ -11,22 +8,7 @@ import { faReact, faNpm } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 import { ExternalLinkButton } from '../components/Button'
-
-export const SQUIRCLE: Project = {
-  id: 'squircle',
-  status: ProjectStatus.Production,
-  banner,
-  bannerAlt: 'Squircle Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
-  iconAlt: 'Squircle App Icon',
-  title: 'Squircle',
-  description: 'Create squircles and superellipses in Figma',
-  date: 'March 2021',
-  url: 'https://squircle.club',
-  repo: 'https://github.com/scotato/figma-squircle'
-}
+import SQUIRCLE from '../projects/SquircleProject'
 
 export function SquircleCard() {
   return (

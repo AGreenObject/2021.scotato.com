@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { ProjectStatus } from './Project'
 import { AppIconIndicator } from './AppIcon'
+import AspectRatio from './AspectRatio'
 
 interface CardProps {
   image: string;
@@ -23,7 +24,7 @@ const Card = (props: CardProps) => {
   return (
     <SquircleMask p1={8} p2={48} style={{display: 'flex'}}>
       <Stack spacing={0} bg={bg} flexGrow={1}>
-        <Image src={image} bg="gray.500" alt={imageAlt} aspectRatio="2" />
+        <Image src={image} bg="gray.500" alt={imageAlt} fallback={<AspectRatio />} />
         <Grid
           p={4}
           gridTemplateColumns="64px 1fr auto"

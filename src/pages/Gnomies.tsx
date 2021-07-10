@@ -1,8 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/gnomies-logo.svg"
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import Card from '../components/Card'
-import banner from '../images/gnomies-banner.png'
-import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
@@ -10,25 +7,11 @@ import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
+import Gallery from '../components/Gallery'
 import { Section } from '../components/Sidebar'
-import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
+import { ProjectStatusSection } from '../components/Project'
 import { ExternalLinkButton } from '../components/Button'
-
-export const GNOMIES: Project = {
-  id: 'gnomies',
-  status: ProjectStatus.Development,
-  banner,
-  bannerAlt: 'Gnomies Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
-  iconAlt: 'Gnomies App Icon',
-  title: 'Gnomies',
-  description: 'Unique collectible NFT avatars powered by Ethereum',
-  date: 'March 2021',
-  url: 'https://gnomies.app',
-  repo: 'https://github.com/scotato/gnomies'
-}
+import GNOMIES from '../projects/GnomiesProject'
 
 export function GnomiesCard() {
   return (
@@ -54,6 +37,9 @@ export function GnomiesPage() {
         iconAlt={GNOMIES.iconAlt}
         status={GNOMIES.status}
       />
+
+      <Gallery images={GNOMIES.gallery} />
+
       <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
        <ExternalLinkButton href={GNOMIES.url} bg="blue.500">
          Web App

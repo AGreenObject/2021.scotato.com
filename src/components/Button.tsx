@@ -5,9 +5,11 @@ import Hoverable from './Hoverable'
 
 function SquircleButton(props: ButtonProps) {
   return (
-    <SquircleMask p1={4} p2={16}>
-      <Button size="lg" borderRadius={0} width="100%" {...props} />
-    </SquircleMask>
+    <Hoverable>
+      <SquircleMask p1={4} p2={16}>
+        <Button size="lg" borderRadius={0} width="100%" {...props} />
+      </SquircleMask>
+    </Hoverable>
   );
 }
 

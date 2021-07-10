@@ -1,8 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/sleeper-logo.svg"
 import Card from '../components/Card'
-import banner from '../images/sleeper-banner.png'
-import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
-import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
+import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
@@ -10,22 +7,7 @@ import { faReact } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 import { ExternalLinkButton } from '../components/Button'
-
-export const SLEEPER: Project = {
-  id: 'sleeper',
-  status: ProjectStatus.Production,
-  banner,
-  bannerAlt: 'Sleeper Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
-  iconAlt: 'Sleeper App Icon',
-  title: 'Sleeper',
-  description: 'An ambient new tab browser extension',
-  date: 'March 2021',
-  url: 'https://sleeper.fyi',
-  repo: 'https://github.com/scotato/sleeper'
-}
+import SLEEPER from '../projects/SleeperProject'
 
 export function SleeperCard() {
   return (

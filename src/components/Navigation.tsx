@@ -1,10 +1,10 @@
 import { Stack, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import { LinkButton } from "./Button";
-import { GNOMIES } from '../pages/Gnomies'
-import { HABANERO } from '../pages/Habanero'
-import { SQUIRCLE } from '../pages/Squircle'
-import { SLEEPER } from '../pages/Sleeper'
 import { colorForStatus } from '../components/Project'
+import GNOMIES from '../projects/GnomiesProject'
+import HABANERO from '../projects/HabaneroProject'
+import SQUIRCLE from '../projects/SquircleProject'
+import SLEEPER from '../projects/SleeperProject'
 import Hoverable from './Hoverable'
 
 const BUTTONS = [ GNOMIES, HABANERO, SQUIRCLE, SLEEPER ]

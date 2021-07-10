@@ -16,6 +16,7 @@ export interface Project {
   date: string;
   url: string;
   repo: string;
+  gallery: string[];
 }
 
 export enum ProjectStatus {

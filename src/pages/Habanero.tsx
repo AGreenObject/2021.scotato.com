@@ -1,8 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/habanero-logo.svg"
 import Card from '../components/Card'
-import banner from '../images/habanero-banner.png'
-import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
-import { Project, ProjectStatus, ProjectStatusSection } from '../components/Project'
+import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
@@ -13,22 +10,7 @@ import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 import { ExternalLinkButton } from '../components/Button'
-
-export const HABANERO: Project = {
-  id: 'habanero',
-  status: ProjectStatus.Hold,
-  banner,
-  bannerAlt: 'Habanero Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
-  iconAlt: 'Habanero App Icon',
-  title: 'Habanero',
-  description: 'Discover and collect recipes from the web',
-  date: 'March 2021',
-  url: 'https://habanero.red',
-  repo: 'https://github.com/scotato/habanero'
-}
+import HABANERO from '../projects/HabaneroProject'
 
 export function HabaneroCard() {
   return (
