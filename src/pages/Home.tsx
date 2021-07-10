@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Box, Flex, Stack, Heading, Text, Link, Image, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Stack, Heading, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { version } from '../../package.json'
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
@@ -7,52 +7,23 @@ import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faPencilRuler, faTools } from "@fortawesome/free-solid-svg-icons";
-import { SquircleMask } from "@scotato/react-squircle";
-import gnomiesBanner from '../images/gnomies-banner.png'
+import { GnomiesCard } from './Gnomies'
+import Link from '../components/Link'
+import { Link as RouterLink } from 'react-router-dom'
 
 export function HomePage() {
-  const bg = useColorModeValue("white", "gray.900");
-
   return (
     <Stack spacing={[4, 8]} mx="auto" maxW={960}>
-      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
-        <Stack spacing={0} bg={bg} flexGrow={1}>
-          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
-          <Box p={8}>
-          </Box>
-        </Stack>
-      </SquircleMask>
-
-      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
-        <Stack spacing={0} bg={bg} flexGrow={1}>
-          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
-          <Box p={8}>
-          </Box>
-        </Stack>
-      </SquircleMask>
-
-      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
-        <Stack spacing={0} bg={bg} flexGrow={1}>
-          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
-          <Box p={8}>
-          </Box>
-        </Stack>
-      </SquircleMask>
-
-      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
-        <Stack spacing={0} bg={bg} flexGrow={1}>
-          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
-          <Box p={8}>
-          </Box>
-        </Stack>
-      </SquircleMask>
+      <RouterLink to="/gnomies">
+        <GnomiesCard />
+      </RouterLink>
     </Stack>
   )
 }
 
 export function HomeSidebar() {
   return (
-    <Flex direction="column" p={6} height="100%">
+    <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
         <Section
           title="About"
@@ -63,11 +34,11 @@ export function HomeSidebar() {
               </Text>
 
               <Text>
-                Send me a message on <Reference to="https://twitter.com/scotato" text="Twitter" />!
+                Send me a message on <Link to="https://twitter.com/scotato" text="Twitter" />!
               </Text>
 
               <Text>
-              The source code for this site is available on <Reference to="https://github.com/scotato/scotato.com" text="GitHub" />.
+              The source code for this site is available on <Link to="https://github.com/scotato/scotato.com" text="GitHub" />.
               </Text>
             </Stack>
           )}
@@ -124,19 +95,6 @@ export function HomeSidebar() {
 
       <Version />
     </Flex>
-  )
-}
-
-interface ReferenceProps {
-  to: string;
-  text: string;
-}
-
-function Reference ({ to, text }: ReferenceProps) {
-  return (
-    <Link href={to} fontWeight={600} color="blue.500" target="_blank">
-      {text}
-    </Link>
   )
 }
 

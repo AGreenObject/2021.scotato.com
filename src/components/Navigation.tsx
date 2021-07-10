@@ -1,10 +1,10 @@
 import { Stack, useColorModeValue } from "@chakra-ui/react";
-import { ReactComponent as GnomiesLogo } from "../images/gnomies-logo.svg";
 import { ReactComponent as HabaneroLogo } from "../images/habanero-logo.svg";
 import { ReactComponent as SquircleLogo } from "../images/squircle-logo.svg";
 import { ReactComponent as SleeperLogo } from "../images/sleeper-logo.svg";
 import { SquircleMask } from "@scotato/react-squircle";
 import { LinkButton } from "./Button";
+import { GNOMIES } from '../pages/Gnomies'
 
 const Navigation = () => {
   const bg = useColorModeValue("white", "gray.900");
@@ -14,11 +14,7 @@ const Navigation = () => {
   return (
     <Stack p={3} spacing={1} direction="column">
       <LinkButton
-        leftIcon={
-          <SquircleMask p1={2} p2={16}>
-            <GnomiesLogo {...iconSize} />
-          </SquircleMask>
-        }
+        leftIcon={GNOMIES.iconMedium}
         justifyContent="flex-start"
         fontWeight={500}
         px={3}
