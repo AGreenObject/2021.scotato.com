@@ -1,4 +1,3 @@
-import React from "react";
 import { Stack, Divider, BoxProps, useColorModeValue } from "@chakra-ui/react";
 
 const Sidebar = (props: BoxProps) => {
@@ -7,6 +6,9 @@ const Sidebar = (props: BoxProps) => {
   return (
     <Stack
       spacing={0}
+      position={['initial', 'sticky']}
+      height={['auto', '100vh']}
+      top={0}
       divider={<Divider />}
       overflowY="scroll"
       bg={bg}

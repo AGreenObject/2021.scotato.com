@@ -1,5 +1,6 @@
+import { ReactNode } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Box } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import Layout from "./Layout";
 import Sidebar from "./Sidebar";
 import Introduction from "./Introduction";
@@ -21,7 +22,7 @@ function App() {
           <Actions />
         </Sidebar>
 
-        <Box as="main" p={16}>
+        <Main>
           <Switch>
             <Route path="/gnomies" component={GnomiesPage} />
             <Route path="/habanero" component={HabaneroPage} />
@@ -29,7 +30,7 @@ function App() {
             <Route path="/sleeper" component={SleeperPage} />
             <Route path="/" component={HomePage} />
           </Switch>
-        </Box>
+        </Main>
 
         <Sidebar>
           <Switch>
@@ -43,6 +44,16 @@ function App() {
       </Layout>
     </Router>
   );
+}
+
+function Main ({ children }: { children: ReactNode }) {
+  const bg = useColorModeValue("gray.100", "gray.800");
+  
+  return (
+    <Box as="main" p={[4, 8]} bg={bg}>
+      {children}
+    </Box>
+  )
 }
 
 export default App;

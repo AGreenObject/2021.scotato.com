@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Flex, Stack, Heading, Text, Link, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Stack, Heading, Text, Link, Image, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { version } from '../../package.json'
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
@@ -7,51 +7,46 @@ import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faPencilRuler, faTools } from "@fortawesome/free-solid-svg-icons";
-
-
-interface ReferenceProps {
-  to: string;
-  text: string;
-}
-
-const Reference = ({ to, text }: ReferenceProps) => (
-  <Link href={to} fontWeight={600} color="blue.500" target="_blank">
-    {text}
-  </Link>
-);
-
-interface SectionProps {
-  title: string;
-  body: ReactNode;
-}
-
-const Section = ({title, body} : SectionProps) => (
-  <Stack spacing={4}>
-    <Heading fontWeight={700} fontSize={24} lineHeight={1}>
-      {title}
-    </Heading>
-
-    {body}
-  </Stack>
-)
-
-const Version = () => {
-  const color = useColorModeValue('gray.300', 'gray.700');
-
-  return (
-    <Text
-      mt="auto"
-      color={color}
-      fontWeight="500"
-      textAlign="center"
-      children={version}
-    />
-  )
-}
+import { SquircleMask } from "@scotato/react-squircle";
+import gnomiesBanner from '../images/gnomies-banner.png'
 
 export function HomePage() {
+  const bg = useColorModeValue("white", "gray.900");
+
   return (
-    <p>Home</p>
+    <Stack spacing={[4, 8]} mx="auto" maxW={960}>
+      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
+        <Stack spacing={0} bg={bg} flexGrow={1}>
+          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
+          <Box p={8}>
+          </Box>
+        </Stack>
+      </SquircleMask>
+
+      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
+        <Stack spacing={0} bg={bg} flexGrow={1}>
+          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
+          <Box p={8}>
+          </Box>
+        </Stack>
+      </SquircleMask>
+
+      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
+        <Stack spacing={0} bg={bg} flexGrow={1}>
+          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
+          <Box p={8}>
+          </Box>
+        </Stack>
+      </SquircleMask>
+
+      <SquircleMask p1={8} p2={32} style={{display: 'flex'}}>
+        <Stack spacing={0} bg={bg} flexGrow={1}>
+          <Image src={gnomiesBanner} bg="gray.500" alt="Gnomies Banner" />
+          <Box p={8}>
+          </Box>
+        </Stack>
+      </SquircleMask>
+    </Stack>
   )
 }
 
@@ -83,11 +78,11 @@ export function HomeSidebar() {
           body={(
             <List spacing={3}>
               <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faPencilRuler} color="orange.400" fontSize={20} fixedWidth />
+                <ListIcon as={FontAwesomeIcon} icon={faPencilRuler} color="orange.400" fontSize={18} fixedWidth />
                 Product Design
               </ListItem>
               <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faTools} color="purple.400" fontSize={20} fixedWidth />
+                <ListIcon as={FontAwesomeIcon} icon={faTools} color="purple.400" fontSize={18} fixedWidth />
                 Software Engineering
               </ListItem>
             </List>
@@ -129,5 +124,49 @@ export function HomeSidebar() {
 
       <Version />
     </Flex>
+  )
+}
+
+interface ReferenceProps {
+  to: string;
+  text: string;
+}
+
+function Reference ({ to, text }: ReferenceProps) {
+  return (
+    <Link href={to} fontWeight={600} color="blue.500" target="_blank">
+      {text}
+    </Link>
+  )
+}
+
+interface SectionProps {
+  title: string;
+  body: ReactNode;
+}
+
+function Section ({title, body} : SectionProps) {
+  return (
+    <Stack spacing={4}>
+      <Heading fontWeight={700} fontSize={24} lineHeight={1}>
+        {title}
+      </Heading>
+  
+      {body}
+    </Stack>
+  )
+}
+
+function Version () {
+  const color = useColorModeValue('gray.300', 'gray.700');
+
+  return (
+    <Text
+      mt="auto"
+      color={color}
+      fontWeight="500"
+      textAlign="center"
+      children={version}
+    />
   )
 }

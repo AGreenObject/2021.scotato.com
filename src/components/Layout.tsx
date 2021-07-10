@@ -12,7 +12,7 @@ function Layout({ children }: LayoutProps) {
   });
   const gridTemplateRows = useBreakpointValue({
     md: "auto auto auto",
-    lg: "100vh",
+    lg: "auto",
   });
 
   return (

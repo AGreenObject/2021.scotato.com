@@ -1,20 +1,29 @@
 import { Stack, useColorModeValue } from "@chakra-ui/react";
-import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
-import { ReactComponent as ReactLogo } from "../images/react-logo.svg";
+import { ReactComponent as GnomiesLogo } from "../images/gnomies-logo.svg";
+import { ReactComponent as HabaneroLogo } from "../images/habanero-logo.svg";
+import { ReactComponent as SquircleLogo } from "../images/squircle-logo.svg";
+import { ReactComponent as SleeperLogo } from "../images/sleeper-logo.svg";
+import { SquircleMask } from "@scotato/react-squircle";
 import { LinkButton } from "./Button";
 
 const Navigation = () => {
   const bg = useColorModeValue("white", "gray.900");
   const bgHover = useColorModeValue("gray.100", "black");
+  const iconSize = { width: 32, height: 32 }
 
   return (
-    <Stack p={4} spacing={2} direction="column">
+    <Stack p={3} spacing={1} direction="column">
       <LinkButton
-        leftIcon={<FigmaLogo width={24} height={24} />}
+        leftIcon={
+          <SquircleMask p1={2} p2={16}>
+            <GnomiesLogo {...iconSize} />
+          </SquircleMask>
+        }
         justifyContent="flex-start"
-        fontWeight={400}
+        fontWeight={500}
         px={3}
-        height={10}
+        py={6}
+        iconSpacing={3}
         bg={bg}
         _hover={{ bg: bgHover }}
         to="/gnomies"
@@ -22,38 +31,53 @@ const Navigation = () => {
         Gnomies
       </LinkButton>
       <LinkButton
-        leftIcon={<ReactLogo width={24} height={24} />}
+        leftIcon={
+          <SquircleMask p1={2} p2={16}>
+            <HabaneroLogo {...iconSize} />
+          </SquircleMask>
+        }
         to="/habanero"
         justifyContent="flex-start"
-        fontWeight={400}
+        fontWeight={500}
         px={3}
+        py={6}
+        iconSpacing={3}
         bg={bg}
         _hover={{ bg: bgHover }}
-        height={10}
       >
         Habanero
       </LinkButton>
       <LinkButton
-        leftIcon={<ReactLogo width={24} height={24} />}
+        leftIcon={
+          <SquircleMask p1={2} p2={16}>
+            <SquircleLogo {...iconSize} />
+          </SquircleMask>
+        }
         to="squircle"
         justifyContent="flex-start"
-        fontWeight={400}
+        fontWeight={500}
         px={3}
+        py={6}
+        iconSpacing={3}
         bg={bg}
         _hover={{ bg: bgHover }}
-        height={10}
       >
         Squircle
       </LinkButton>
       <LinkButton
-        leftIcon={<ReactLogo width={24} height={24} />}
+        leftIcon={
+          <SquircleMask p1={2} p2={16}>
+            <SleeperLogo {...iconSize} />
+          </SquircleMask>
+        }
         to="/sleeper"
         justifyContent="flex-start"
-        fontWeight={400}
+        fontWeight={500}
         px={3}
+        py={6}
+        iconSpacing={3}
         bg={bg}
         _hover={{ bg: bgHover }}
-        height={10}
       >
         Sleeper
       </LinkButton>

@@ -11,8 +11,18 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       "html, body": {
-        bg: mode("gray.100", "gray.800")(props),
+        bg: mode("white", "gray.900")(props),
+        height: '100%',
+        overflow: 'hidden'
       },
+      "#root": {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        overflow: 'auto',
+      }
     }),
   },
 })
