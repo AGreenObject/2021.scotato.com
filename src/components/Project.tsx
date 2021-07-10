@@ -1,0 +1,76 @@
+import { faCheckCircle, faExclamationTriangle, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { Box, Stack, Text } from "@chakra-ui/react";
+import { Section } from '../components/Sidebar'
+
+export interface Project {
+  id: string;
+  status: ProjectStatus;
+  banner: string;
+  bannerAlt: string;
+  iconSmall: JSX.Element;
+  iconMedium: JSX.Element;
+  iconLarge: JSX.Element;
+  iconAlt: string;
+  title: string;
+  description: string;
+  date: string;
+  url: string;
+  repo: string;
+}
+
+export enum ProjectStatus {
+  Production = "Live",
+  Development = "In Development",
+  Abandoned = "Abandoned"
+}
+
+export interface ProjectStatusSectionProps {
+  status: ProjectStatus;
+  title: string;
+}
+
+export function ProjectStatusSection ({ status, title }: ProjectStatusSectionProps) {
+  return (
+    <Section
+      title="Status"
+      body={(
+        <Stack spacing={3}>
+          <Text>
+            {title} {textForStatus(status)} <Box as="span" fontWeight={600} color={colorForStatus(status)}>{status}</Box>
+          </Text>
+        </Stack>
+      )}
+    />
+  )
+}
+
+export function colorForStatus (status: ProjectStatus) {
+  switch (status) {
+    case ProjectStatus.Production:
+      return 'green.500'
+    case ProjectStatus.Development:
+      return 'yellow.500'
+    case ProjectStatus.Abandoned:
+      return 'red.500'
+  }
+}
+
+export function iconForStatus (status: ProjectStatus) {
+  switch (status) {
+    case ProjectStatus.Production:
+      return faCheckCircle
+    case ProjectStatus.Development:
+      return faExclamationTriangle
+    case ProjectStatus.Abandoned:
+      return faExclamationCircle
+  }
+}
+
+export function textForStatus (status: ProjectStatus) {
+  switch (status) {
+    case ProjectStatus.Development:
+    case ProjectStatus.Production:
+    case ProjectStatus.Abandoned:
+      return "is currently"
+  }
+}

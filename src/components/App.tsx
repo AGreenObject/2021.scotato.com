@@ -50,7 +50,7 @@ function Main ({ children }: { children: ReactNode }) {
   const bg = useColorModeValue("gray.100", "gray.800");
   
   return (
-    <Box as="main" p={[4, 8]} bg={bg}>
+    <Box as="main" bg={bg}>
       {children}
     </Box>
   )

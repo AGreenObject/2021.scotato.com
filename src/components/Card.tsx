@@ -2,6 +2,8 @@ import { Box, Grid, Heading, Text, Stack, Image, useColorModeValue } from "@chak
 import { SquircleMask } from "@scotato/react-squircle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { ProjectStatus } from './Project'
+import { AppIconIndicator } from './AppIcon'
 
 interface CardProps {
   image: string;
@@ -10,10 +12,11 @@ interface CardProps {
   description: string;
   icon: JSX.Element;
   iconAlt: string;
+  status: ProjectStatus;
 }
 
 const Card = (props: CardProps) => {
-  const { image, imageAlt, title, description, icon } = props
+  const { image, imageAlt, title, description, icon, status } = props
   const bg = useColorModeValue("white", "gray.900");
   const arrowColor = useColorModeValue("gray.200", "gray.700");
 
@@ -27,7 +30,9 @@ const Card = (props: CardProps) => {
           gridColumnGap="16px"
           alignItems="center"
         >
-          {icon}
+          <AppIconIndicator status={status}>
+            {icon}
+          </AppIconIndicator>
           <Grid gridTemplateRows="24px 24px" gridRowGap="6px">
             <Heading fontSize={24}>{title}</Heading>
             <Text>{description}</Text>

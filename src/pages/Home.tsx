@@ -1,5 +1,4 @@
-import { ReactNode } from 'react'
-import { Flex, Stack, Heading, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Stack, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { version } from '../../package.json'
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
@@ -7,16 +6,70 @@ import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faPencilRuler, faTools } from "@fortawesome/free-solid-svg-icons";
-import { GnomiesCard } from './Gnomies'
 import Link from '../components/Link'
 import { Link as RouterLink } from 'react-router-dom'
+import { motion } from "framer-motion"
+import { Section } from '../components/Sidebar'
+import { GnomiesCard } from './Gnomies'
+import { HabaneroCard } from './Habanero'
+import { SquircleCard } from './Squircle'
+import { SleeperCard } from './Sleeper'
+
+const spring = {
+  type: 'spring',
+  damping: 15,
+  stiffness: 500,
+  restSpeed: 0.001,
+  restDelta: 0.001
+}
+
+const variants = {
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { y: spring }
+  },
+  hidden: {
+    y: 8,
+    opacity: 0,
+    transition: { y: spring }
+  }
+}
+
+interface AnimatedLinkProps {
+  to: string;
+  children: JSX.Element;
+}
+
+const AnimatedLink = (props: AnimatedLinkProps) => (
+  <motion.div
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.99 }}
+    variants={variants}
+    transition={spring}
+  >
+    <RouterLink {...props} />
+  </motion.div>
+)
 
 export function HomePage() {
   return (
-    <Stack spacing={[4, 8]} mx="auto" maxW={960}>
-      <RouterLink to="/gnomies">
+    <Stack p={[8, 16]} spacing={[4, 12]} mx="auto" maxW={960}>
+      <AnimatedLink to="/gnomies">
         <GnomiesCard />
-      </RouterLink>
+      </AnimatedLink>
+
+      <AnimatedLink to="/habanero">
+        <HabaneroCard />
+      </AnimatedLink>
+
+      <AnimatedLink to="/squircle">
+        <SquircleCard />
+      </AnimatedLink>
+
+      <AnimatedLink to="/sleeper">
+        <SleeperCard />
+      </AnimatedLink>
     </Stack>
   )
 }
@@ -95,23 +148,6 @@ export function HomeSidebar() {
 
       <Version />
     </Flex>
-  )
-}
-
-interface SectionProps {
-  title: string;
-  body: ReactNode;
-}
-
-function Section ({title, body} : SectionProps) {
-  return (
-    <Stack spacing={4}>
-      <Heading fontWeight={700} fontSize={24} lineHeight={1}>
-        {title}
-      </Heading>
-  
-      {body}
-    </Stack>
   )
 }
 
