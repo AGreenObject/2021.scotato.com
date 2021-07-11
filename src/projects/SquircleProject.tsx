@@ -1,4 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/squircle-logo.svg"
+import { ReactComponent as SquircleAppIcon } from "../images/squircle-app-icon.svg"
+import { ReactComponent as SquircleLogo } from "../images/squircle-logo.svg"
 import banner from '../images/squircle-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus } from '../components/Project'
@@ -14,9 +15,10 @@ export const SQUIRCLE: Project = {
   status: ProjectStatus.Production,
   banner,
   bannerAlt: 'Squircle Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
+  icon: SquircleAppIcon,
+  iconSmall: <AppIconSmall Icon={SquircleLogo} />,
+  iconMedium: <AppIconMedium Icon={SquircleLogo} />,
+  iconLarge: <AppIconLarge Icon={SquircleLogo} />,
   iconAlt: 'Squircle App Icon',
   title: 'Squircle',
   description: 'Create squircles and superellipses in Figma',

@@ -1,4 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/gnomies-logo.svg"
+import { ReactComponent as GnomiesAppIcon } from "../images/gnomies-app-icon.svg"
+import { ReactComponent as GnomiesLogo } from "../images/gnomies-logo.svg"
 import banner from '../images/gnomies-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus } from '../components/Project'
@@ -14,9 +15,10 @@ const GNOMIES: Project = {
   status: ProjectStatus.Development,
   banner,
   bannerAlt: 'Gnomies Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
+  icon: GnomiesAppIcon,
+  iconSmall: <AppIconSmall Icon={GnomiesLogo} />,
+  iconMedium: <AppIconMedium Icon={GnomiesLogo} />,
+  iconLarge: <AppIconLarge Icon={GnomiesLogo} />,
   iconAlt: 'Gnomies App Icon',
   title: 'Gnomies',
   description: 'Unique collectible NFT avatars powered by Ethereum',

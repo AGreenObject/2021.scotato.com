@@ -1,4 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/habanero-logo.svg"
+import { ReactComponent as HabaneroAppIcon } from "../images/habanero-app-icon.svg"
+import { ReactComponent as HabaneroLogo } from "../images/habanero-logo.svg"
 import banner from '../images/habanero-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus } from '../components/Project'
@@ -14,9 +15,10 @@ export const HABANERO: Project = {
   status: ProjectStatus.Hold,
   banner,
   bannerAlt: 'Habanero Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
+  icon: HabaneroAppIcon,
+  iconSmall: <AppIconSmall Icon={HabaneroLogo} />,
+  iconMedium: <AppIconMedium Icon={HabaneroLogo} />,
+  iconLarge: <AppIconLarge Icon={HabaneroLogo} />,
   iconAlt: 'Habanero App Icon',
   title: 'Habanero',
   description: 'Discover and collect recipes from the web',

@@ -1,4 +1,5 @@
-import { ReactComponent as AppIcon } from "../images/sleeper-logo.svg"
+import { ReactComponent as SleeperAppIcon } from "../images/sleeper-app-icon.svg"
+import { ReactComponent as SleeperLogo } from "../images/sleeper-logo.svg"
 import banner from '../images/sleeper-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus } from '../components/Project'
@@ -14,9 +15,10 @@ export const SLEEPER: Project = {
   status: ProjectStatus.Production,
   banner,
   bannerAlt: 'Sleeper Banner',
-  iconSmall: <AppIconSmall Icon={AppIcon} />,
-  iconMedium: <AppIconMedium Icon={AppIcon} />,
-  iconLarge: <AppIconLarge Icon={AppIcon} />,
+  icon: SleeperAppIcon,
+  iconSmall: <AppIconSmall Icon={SleeperLogo} />,
+  iconMedium: <AppIconMedium Icon={SleeperLogo} />,
+  iconLarge: <AppIconLarge Icon={SleeperLogo} />,
   iconAlt: 'Sleeper App Icon',
   title: 'Sleeper',
   description: 'An ambient new tab browser extension',

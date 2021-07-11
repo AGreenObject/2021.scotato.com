@@ -7,6 +7,7 @@ export interface Project {
   status: ProjectStatus;
   banner: string;
   bannerAlt: string;
+  icon: any;
   iconSmall: JSX.Element;
   iconMedium: JSX.Element;
   iconLarge: JSX.Element;

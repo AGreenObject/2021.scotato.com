@@ -1,9 +1,11 @@
 import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
+import { Flex, Stack, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import { ExternalLinkButton } from '../components/Button'
+import { ReactComponent as ChromeLogo } from '../images/chrome-logo.svg'
+import { ReactComponent as FirefoxLogo } from '../images/firefox-logo.svg'
+import { ReactComponent as EdgeLogo } from '../images/edge-logo.svg'
+import { faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Card from '../components/Card'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
@@ -51,20 +53,13 @@ export function SleeperPage() {
           <Text>The project is versioned with npm-version, which triggers the extension build script, pushes changes and redeploys the site.</Text>
         </Section>
       </Page>
-
-      <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
-       <ExternalLinkButton href={SLEEPER.url} bg="blue.500">
-         Web App
-      </ExternalLinkButton>
-      <ExternalLinkButton href={SLEEPER.repo} bg="gray.500">
-         Source Code
-      </ExternalLinkButton>
-      </Grid>
     </Stack>
   )
 }
 
 export function SleeperSidebar() {
+  const colorGithub = useColorModeValue("gray.900", "gray.100")
+
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -75,6 +70,8 @@ export function SleeperSidebar() {
             </Text>
           </Stack>
         </Section>
+
+        <ProjectStatusSection status={SLEEPER.status} title={SLEEPER.title} />
 
         <Section title="Built With">
           <List spacing={3}>
@@ -89,7 +86,40 @@ export function SleeperSidebar() {
           </List>
         </Section>
 
-        <ProjectStatusSection status={SLEEPER.status} title={SLEEPER.title} />
+        <Section title="On the Web">
+          <List spacing={3}>
+            <ListItem>
+              <Link to={SLEEPER.url}>
+                <ListIcon as={SLEEPER.icon} fontSize={20} width="25px" />
+                Website
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to={SLEEPER.repo}>
+                <ListIcon as={FontAwesomeIcon} icon={faGithub} color={colorGithub} fontSize={20} fixedWidth />
+                Source Code
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to="https://chrome.google.com/webstore/detail/sleeper/njihjodgjnlpkoipodopnchepnpoogdi">
+                <ListIcon as={ChromeLogo} fontSize={20} width="25px" />
+                Chrome Plugin
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to="https://addons.mozilla.org/en-US/firefox/addon/sleeper/">
+                <ListIcon as={FirefoxLogo} fontSize={20} width="25px" />
+                Firefox Plugin
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to="https://microsoftedge.microsoft.com/addons/detail/gdihfmeehghdcheocnakekjegoaiphlo">
+                <ListIcon as={EdgeLogo} fontSize={20} width="25px" />
+                Edge Plugin
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
       </Stack>
     </Flex>
   )
