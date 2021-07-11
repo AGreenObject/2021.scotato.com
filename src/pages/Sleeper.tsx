@@ -8,6 +8,7 @@ import Card from '../components/Card'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
 import Section from '../components/Section'
+import Page from '../components/Page'
 import SLEEPER from '../projects/SleeperProject'
 
 export function SleeperCard() {
@@ -37,6 +38,16 @@ export function SleeperPage() {
 
       <Gallery images={SLEEPER.gallery} />
 
+      <Page>
+        <Section title="Test">
+          <p>some stuff here</p>
+        </Section>
+
+        <Section title="Other">
+          this stuff
+        </Section>
+      </Page>
+
       <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
        <ExternalLinkButton href={SLEEPER.url} bg="blue.500">
          Web App
@@ -53,32 +64,26 @@ export function SleeperSidebar() {
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
-        <Section
-          title="About"
-          body={(
-            <Stack spacing={3}>
-              <Text>
-                Install the new tab browser extension for Chrome, Brave, Firefox or Edge.
-              </Text>
-            </Stack>
-          )}
-        />
+        <Section title="About">
+          <Stack spacing={3}>
+            <Text>
+              Install the new tab browser extension for Chrome, Brave, Firefox or Edge.
+            </Text>
+          </Stack>
+        </Section>
 
-        <Section
-          title="Built With"
-          body={(
-            <List spacing={3}>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
-                React
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
-                Figma
-              </ListItem>
-            </List>
-          )}
-        />
+        <Section title="Built With">
+          <List spacing={3}>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
+              React
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
+              Figma
+            </ListItem>
+          </List>
+        </Section>
 
         <ProjectStatusSection status={SLEEPER.status} title={SLEEPER.title} />
       </Stack>

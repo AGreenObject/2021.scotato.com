@@ -32,16 +32,13 @@ export interface ProjectStatusSectionProps {
 
 export function ProjectStatusSection ({ status, title }: ProjectStatusSectionProps) {
   return (
-    <Section
-      title="Status"
-      body={(
-        <Stack spacing={3}>
-          <Text>
-            {title} {textForStatus(status)} <Box as="span" fontWeight={600} color={colorForStatus(status)}>{status}</Box>
-          </Text>
-        </Stack>
-      )}
-    />
+    <Section title="Status">
+      <Stack spacing={3}>
+        <Text>
+          {title} {textForStatus(status)} <Box as="span" fontWeight={600} color={colorForStatus(status)}>{status}</Box>
+        </Text>
+      </Stack>
+    </Section>
   )
 }
 

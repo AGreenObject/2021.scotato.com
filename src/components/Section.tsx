@@ -1,19 +1,17 @@
-import { ReactNode } from 'react'
-import { Stack, Heading } from "@chakra-ui/react";
+import { Stack, Heading, StackProps } from "@chakra-ui/react";
 
 interface SectionProps {
   title: string;
-  body: ReactNode;
 }
 
-function Section ({title, body} : SectionProps) {
+function Section ({ title, children, ...props } : SectionProps & StackProps) {
   return (
-    <Stack spacing={3} as="section">
+    <Stack spacing={3} as="section" {...props}>
       <Heading fontWeight={700} fontSize={20} lineHeight={1}>
         {title}
       </Heading>
   
-      {body}
+      {children}
     </Stack>
   )
 }

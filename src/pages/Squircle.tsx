@@ -63,40 +63,34 @@ export function SquircleSidebar() {
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
-        <Section
-          title="About"
-          body={(
-            <Stack spacing={3}>
-              <Text>
-                Install the Figma extension, try the Web App or install the NPM package to create this mythical shape.
-              </Text>
-            </Stack>
-          )}
-        />
+        <Section title="About">
+          <Stack spacing={3}>
+            <Text>
+              Install the Figma extension, try the Web App or install the NPM package to create this mythical shape.
+            </Text>
+          </Stack>
+        </Section>
 
-        <Section
-          title="Built With"
-          body={(
-            <List spacing={3}>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
-                React
-              </ListItem>
-              <ListItem>
-                <ListIcon as={SvelteLogo} fontSize={20} width="25px" />
-                Svelte
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faNpm} color="red.400" fontSize={20} fixedWidth />
-                NPM
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
-                Figma
-              </ListItem>
-            </List>
-          )}
-        />
+        <Section title="Built With">
+          <List spacing={3}>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
+              React
+            </ListItem>
+            <ListItem>
+              <ListIcon as={SvelteLogo} fontSize={20} width="25px" />
+              Svelte
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faNpm} color="red.400" fontSize={20} fixedWidth />
+              NPM
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
+              Figma
+            </ListItem>
+          </List>
+        </Section>
 
         <ProjectStatusSection status={SQUIRCLE.status} title={SQUIRCLE.title} />
       </Stack>

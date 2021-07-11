@@ -56,48 +56,42 @@ export function GnomiesSidebar() {
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
-        <Section
-          title="About"
-          body={(
-            <Stack spacing={3}>
-              <Text>
-                Mint, Buy, Sell & Trade unique collectible NFT avatars on Ethereum.
-              </Text>
-            </Stack>
-          )}
-        />
+        <Section title="About">
+          <Stack spacing={3}>
+            <Text>
+              Mint, Buy, Sell & Trade unique collectible NFT avatars on Ethereum.
+            </Text>
+          </Stack>
+        </Section>
 
-        <Section
-          title="Built With"
-          body={(
-            <List spacing={3}>
-              <ListItem>
-              <ListIcon as={RedwoodLogo} fontSize={20} width="25px" />
-                Redwood
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
-                React
-              </ListItem>
-              <ListItem>
-                <ListIcon as={GraphqlLogo} fontSize={20} width="25px" />
-                GraphQL
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.400" fontSize={20} fixedWidth />
-                Node.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
-                Figma
-              </ListItem>
-              <ListItem>
-                <ListIcon as={EthereumLogo} fontSize={20} width="25px" />
-                Web3
-              </ListItem>
-            </List>
-          )}
-        />
+        <Section title="Built With">
+          <List spacing={3}>
+            <ListItem>
+            <ListIcon as={RedwoodLogo} fontSize={20} width="25px" />
+              Redwood
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
+              React
+            </ListItem>
+            <ListItem>
+              <ListIcon as={GraphqlLogo} fontSize={20} width="25px" />
+              GraphQL
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.400" fontSize={20} fixedWidth />
+              Node.js
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
+              Figma
+            </ListItem>
+            <ListItem>
+              <ListIcon as={EthereumLogo} fontSize={20} width="25px" />
+              Web3
+            </ListItem>
+          </List>
+        </Section>
 
         <ProjectStatusSection status={GNOMIES.status} title={GNOMIES.title} />
       </Stack>

@@ -58,52 +58,46 @@ export function HabaneroSidebar() {
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
-        <Section
-          title="About"
-          body={(
-            <Stack spacing={3}>
-              <Text>
-                Sign in with Apple to save and discover recipes from the web and access from any device.
-              </Text>
-            </Stack>
-          )}
-        />
+        <Section title="About">
+          <Stack spacing={3}>
+            <Text>
+              Sign in with Apple to save and discover recipes from the web and access from any device.
+            </Text>
+          </Stack>
+        </Section>
 
-        <Section
-          title="Built With"
-          body={(
-            <List spacing={3}>
-              <ListItem>
-              <ListIcon as={RedwoodLogo} fontSize={20} width="25px" />
-                Redwood
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
-                React
-              </ListItem>
-              <ListItem>
-                <ListIcon as={GraphqlLogo} fontSize={20} width="25px" />
-                GraphQL
-              </ListItem>
-              <ListItem>
-                <ListIcon as={PostgreSQLLogo} fontSize={20} width="25px" />
-                PostgreSQL
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faApple} color={colorApple} fontSize={20} fixedWidth />
-                Sign in with Apple
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.400" fontSize={20} fixedWidth />
-                Node.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
-                Figma
-              </ListItem>
-            </List>
-          )}
-        />
+        <Section title="Built With">
+          <List spacing={3}>
+            <ListItem>
+            <ListIcon as={RedwoodLogo} fontSize={20} width="25px" />
+              Redwood
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faReact} color="blue.400" fontSize={20} fixedWidth />
+              React
+            </ListItem>
+            <ListItem>
+              <ListIcon as={GraphqlLogo} fontSize={20} width="25px" />
+              GraphQL
+            </ListItem>
+            <ListItem>
+              <ListIcon as={PostgreSQLLogo} fontSize={20} width="25px" />
+              PostgreSQL
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faApple} color={colorApple} fontSize={20} fixedWidth />
+              Sign in with Apple
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.400" fontSize={20} fixedWidth />
+              Node.js
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FigmaLogo} fontSize={20} width="25px" />
+              Figma
+            </ListItem>
+          </List>
+        </Section>
 
         <ProjectStatusSection status={HABANERO.status} title={HABANERO.title} />
       </Stack>
