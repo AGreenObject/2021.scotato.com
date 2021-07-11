@@ -1,5 +1,4 @@
-import { ReactNode } from 'react'
-import { Stack, Heading, BoxProps, useColorModeValue } from "@chakra-ui/react";
+import { Stack, BoxProps, useColorModeValue } from "@chakra-ui/react";
 
 const Sidebar = (props: BoxProps) => {
   const bg = useColorModeValue("white", "gray.900");
@@ -16,22 +15,5 @@ const Sidebar = (props: BoxProps) => {
     />
   );
 };
-
-interface SectionProps {
-  title: string;
-  body: ReactNode;
-}
-
-export function Section ({title, body} : SectionProps) {
-  return (
-    <Stack spacing={4}>
-      <Heading fontWeight={700} fontSize={20} lineHeight={1}>
-        {title}
-      </Heading>
-  
-      {body}
-    </Stack>
-  )
-}
 
 export default Sidebar;

@@ -5,12 +5,12 @@ import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
-import { Section } from '../components/Sidebar'
 import { ProjectStatusSection } from '../components/Project'
 import { ExternalLinkButton } from '../components/Button'
 import Card from '../components/Card'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
+import Section from '../components/Section'
 import GNOMIES from '../projects/GnomiesProject'
 
 export function GnomiesCard() {

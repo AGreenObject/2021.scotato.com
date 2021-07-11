@@ -31,7 +31,7 @@ export const Actions = () => {
   return (
     <Stack
       p={6}
-      spacing={2}
+      spacing={3}
       direction="row"
       justifyContent="center"
       color={color}
@@ -45,7 +45,7 @@ export const Actions = () => {
           onClick={toggleColorMode}
           bg={bg}
           _hover={{ bg: bgHover }}
-          fontSize="20px"
+          fontSize="22px"
         />
       </Hoverable>
   
@@ -58,7 +58,7 @@ export const Actions = () => {
           icon={<FontAwesomeIcon icon={faGithub} />}
           bg={bg}
           _hover={{ bg: bgHover }}
-          fontSize="22px"
+          fontSize="24px"
         />
       </Hoverable>
       
@@ -71,7 +71,7 @@ export const Actions = () => {
           icon={<FontAwesomeIcon icon={faTwitter} />}
           bg={bg}
           _hover={{ bg: bgHover }}
-          fontSize="22px"
+          fontSize="24px"
         />
       </Hoverable>
       
@@ -84,7 +84,7 @@ export const Actions = () => {
           icon={<FontAwesomeIcon icon={faEthereum} />}
           bg={bg}
           _hover={{ bg: bgHover }}
-          fontSize="22px"
+          fontSize="24px"
         />
       </Hoverable>
     </Stack>

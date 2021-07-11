@@ -1,6 +1,6 @@
 import { faCheckCircle, faExclamationTriangle, faPauseCircle } from "@fortawesome/free-solid-svg-icons";
 import { Box, Stack, Text } from "@chakra-ui/react";
-import { Section } from '../components/Sidebar'
+import Section from '../components/Section'
 
 export interface Project {
   id: string;

@@ -1,5 +1,4 @@
-import { ReactNode } from 'react'
-import { Flex, Stack, Heading, Text, Link, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Stack, Text, Link, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { version } from '../../package.json'
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
@@ -7,7 +6,7 @@ import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faPencilRuler, faTools } from "@fortawesome/free-solid-svg-icons";
-
+import Section from './Section'
 
 interface ReferenceProps {
   to: string;
@@ -19,21 +18,6 @@ const Reference = ({ to, text }: ReferenceProps) => (
     {text}
   </Link>
 );
-
-interface SectionProps {
-  title: string;
-  body: ReactNode;
-}
-
-const Section = ({title, body} : SectionProps) => (
-  <Stack spacing={4}>
-    <Heading fontWeight={700} fontSize={24} lineHeight={1}>
-      {title}
-    </Heading>
-
-    {body}
-  </Stack>
-)
 
 const Version = () => {
   const color = useColorModeValue('gray.300', 'gray.700');

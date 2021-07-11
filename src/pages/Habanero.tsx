@@ -6,11 +6,11 @@ import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as PostgreSQLLogo } from "../images/postgresql-logo.svg";
 import { faReact, faNodeJs, faApple } from "@fortawesome/free-brands-svg-icons";
-import { Section } from '../components/Sidebar'
 import { ExternalLinkButton } from '../components/Button'
 import Card from '../components/Card'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
+import Section from '../components/Section'
 import HABANERO from '../projects/HabaneroProject'
 
 export function HabaneroCard() {

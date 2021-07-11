@@ -6,14 +6,14 @@ import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faJs, faNodeJs } from "@fortawesome/free-brands-svg-icons";
 import { faPencilRuler, faTools } from "@fortawesome/free-solid-svg-icons";
-import Link from '../components/Link'
 import { Link as RouterLink } from 'react-router-dom'
-import Hoverable from '../components/Hoverable'
-import { Section } from '../components/Sidebar'
 import { GnomiesCard } from './Gnomies'
 import { HabaneroCard } from './Habanero'
 import { SquircleCard } from './Squircle'
 import { SleeperCard } from './Sleeper'
+import Hoverable from '../components/Hoverable'
+import Section from '../components/Section'
+import Link from '../components/Link'
 
 interface AnimatedLinkProps {
   to: string;
