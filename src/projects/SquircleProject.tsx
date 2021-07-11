@@ -21,7 +21,7 @@ export const SQUIRCLE: Project = {
   iconLarge: <AppIconLarge Icon={SquircleLogo} />,
   iconAlt: 'Squircle App Icon',
   title: 'Squircle',
-  description: 'Create squircles and superellipses in Figma',
+  description: 'Create squircles and superellipses with ease',
   date: 'March 2021',
   url: 'https://squircle.club',
   repo: 'https://github.com/scotato/figma-squircle',

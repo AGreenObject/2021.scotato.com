@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import Introduction from "./Introduction";
 import Navigation from "./Navigation";
 import Actions from "./Actions";
+import ScrollToTop from "./ScrollToTop";
 import { HomePage, HomeSidebar} from '../pages/Home'
 import { GnomiesPage, GnomiesSidebar} from '../pages/Gnomies'
 import { HabaneroPage, HabaneroSidebar } from '../pages/Habanero'
@@ -15,6 +16,7 @@ import { SleeperPage, SleeperSidebar } from '../pages/Sleeper'
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Sidebar>
           <Introduction />

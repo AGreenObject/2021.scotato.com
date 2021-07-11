@@ -13,16 +13,7 @@ const theme = extendTheme({
       "html, body": {
         bg: mode("white", "gray.900")(props),
         height: '100%',
-        overflow: 'hidden' // prevent scroll bounce
       },
-      "#root": {
-        position: 'absolute',
-        top: 0,
-        bottom: 0,
-        left: 0,
-        right: 0,
-        overflow: 'auto',
-      }
     }),
   },
 })
