@@ -1,15 +1,16 @@
-import Card from '../components/Card'
 import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
+import { Flex, Stack, Grid, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as PostgreSQLLogo } from "../images/postgresql-logo.svg";
-import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
-import Detail from '../components/Detail'
+import { faReact, faNodeJs, faApple } from "@fortawesome/free-brands-svg-icons";
 import { Section } from '../components/Sidebar'
 import { ExternalLinkButton } from '../components/Button'
+import Card from '../components/Card'
+import Detail from '../components/Detail'
+import Gallery from '../components/Gallery'
 import HABANERO from '../projects/HabaneroProject'
 
 export function HabaneroCard() {
@@ -36,19 +37,24 @@ export function HabaneroPage() {
         iconAlt={HABANERO.iconAlt}
         status={HABANERO.status}
       />
+
+      <Gallery images={HABANERO.gallery} />
+
       <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
-       <ExternalLinkButton href={HABANERO.url} bg="blue.500">
-         Web App
-      </ExternalLinkButton>
-      <ExternalLinkButton href={HABANERO.repo} bg="gray.500">
-         Source Code
-      </ExternalLinkButton>
+        <ExternalLinkButton href={HABANERO.url} bg="blue.500">
+          Web App
+        </ExternalLinkButton>
+        <ExternalLinkButton href={HABANERO.repo} bg="gray.500">
+          Source Code
+        </ExternalLinkButton>
       </Grid>
     </Stack>
   )
 }
 
 export function HabaneroSidebar() {
+  const colorApple = useColorModeValue("gray.900", "gray.100")
+
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -82,6 +88,10 @@ export function HabaneroSidebar() {
               <ListItem>
                 <ListIcon as={PostgreSQLLogo} fontSize={20} width="25px" />
                 PostgreSQL
+              </ListItem>
+              <ListItem>
+                <ListIcon as={FontAwesomeIcon} icon={faApple} color={colorApple} fontSize={20} fixedWidth />
+                Sign in with Apple
               </ListItem>
               <ListItem>
                 <ListIcon as={FontAwesomeIcon} icon={faNodeJs} color="green.400" fontSize={20} fixedWidth />

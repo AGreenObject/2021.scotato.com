@@ -1,16 +1,16 @@
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
-import Card from '../components/Card'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
-import Detail from '../components/Detail'
-import Gallery from '../components/Gallery'
 import { Section } from '../components/Sidebar'
 import { ProjectStatusSection } from '../components/Project'
 import { ExternalLinkButton } from '../components/Button'
+import Card from '../components/Card'
+import Detail from '../components/Detail'
+import Gallery from '../components/Gallery'
 import GNOMIES from '../projects/GnomiesProject'
 
 export function GnomiesCard() {

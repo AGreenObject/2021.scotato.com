@@ -1,13 +1,13 @@
-import Card from '../components/Card'
-import Gallery from '../components/Gallery'
 import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
-import Detail from '../components/Detail'
 import { Section } from '../components/Sidebar'
 import { ExternalLinkButton } from '../components/Button'
+import Card from '../components/Card'
+import Detail from '../components/Detail'
+import Gallery from '../components/Gallery'
 import SLEEPER from '../projects/SleeperProject'
 
 export function SleeperCard() {
