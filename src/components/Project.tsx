@@ -48,11 +48,11 @@ export function ProjectStatusSection ({ status, title }: ProjectStatusSectionPro
 export function colorForStatus (status: ProjectStatus) {
   switch (status) {
     case ProjectStatus.Production:
-      return 'green.500'
+      return 'green.400'
     case ProjectStatus.Development:
-      return 'yellow.500'
+      return 'yellow.400'
     case ProjectStatus.Hold:
-      return 'gray.500'
+      return 'gray.400'
   }
 }
 

@@ -11,6 +11,7 @@ interface GalleryProps {
 const Gallery = ({ images }: GalleryProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const bg = useColorModeValue("white", "gray.900");
+  const borderColor = useColorModeValue("gray.200", "gray.700");
   const activeImage = images[activeIndex]
 
   return (
@@ -25,6 +26,8 @@ const Gallery = ({ images }: GalleryProps) => {
           alignItems="center"
           gridAutoColumns="1fr"
           gridAutoFlow="column"
+          borderTop="2px"
+          borderColor={borderColor}
         >
           {images.map((image, index) => {
             return (
@@ -34,6 +37,7 @@ const Gallery = ({ images }: GalleryProps) => {
                   filter={index === activeIndex ? 'initial' : 'grayscale(1)'}
                   opacity={index === activeIndex ? 1 : 0.5}
                   fallback={<AspectRatio ratio={1280 / 800} />}
+                  transition="filter 0.2s ease-in-out, opacity 0.2s ease-in-out"
                   src={image}
                 />
               </Button>

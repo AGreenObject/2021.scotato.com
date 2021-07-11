@@ -1,4 +1,5 @@
 import Card from '../components/Card'
+import Gallery from '../components/Gallery'
 import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
@@ -34,6 +35,8 @@ export function SquirclePage() {
         iconAlt={SQUIRCLE.iconAlt}
         status={SQUIRCLE.status}
       />
+
+      <Gallery images={SQUIRCLE.gallery} />
 
       <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
         <ExternalLinkButton href='https://www.figma.com/community/plugin/930173909910797614/Squircle' bg="purple.500">

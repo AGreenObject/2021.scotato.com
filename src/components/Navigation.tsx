@@ -34,7 +34,7 @@ const Navigation = () => {
                 <Text>{content.title}</Text>
                 <Text
                   fontSize={12}
-                  fontWeight={500}
+                  fontWeight={600}
                   color={colorForStatus(content.status)}
                   children={content.status}
                 />

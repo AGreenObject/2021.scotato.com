@@ -8,7 +8,6 @@ import imageTwo from '../images/sleeper-gallery-2.png'
 import imageThree from '../images/sleeper-gallery-3.png'
 import imageFour from '../images/sleeper-gallery-4.png'
 import imageFive from '../images/sleeper-gallery-5.png'
-import imageSix from '../images/sleeper-gallery-6.png'
 
 export const SLEEPER: Project = {
   id: 'sleeper',
@@ -30,7 +29,6 @@ export const SLEEPER: Project = {
     imageThree,
     imageFour,
     imageFive,
-    imageSix,
   ]
 }
 
