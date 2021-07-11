@@ -1,16 +1,16 @@
 import { ProjectStatusSection } from '../components/Project'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Flex, Stack, Grid, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Stack, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as PostgreSQLLogo } from "../images/postgresql-logo.svg";
-import { faReact, faNodeJs, faApple } from "@fortawesome/free-brands-svg-icons";
-import { ExternalLinkButton } from '../components/Button'
+import { faReact, faNodeJs, faApple, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Card from '../components/Card'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
 import Section from '../components/Section'
+import Link from '../components/Link'
 import HABANERO from '../projects/HabaneroProject'
 
 export function HabaneroCard() {
@@ -39,21 +39,13 @@ export function HabaneroPage() {
       />
 
       <Gallery images={HABANERO.gallery} />
-
-      <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
-        <ExternalLinkButton href={HABANERO.url} bg="blue.500">
-          Web App
-        </ExternalLinkButton>
-        <ExternalLinkButton href={HABANERO.repo} bg="gray.500">
-          Source Code
-        </ExternalLinkButton>
-      </Grid>
     </Stack>
   )
 }
 
 export function HabaneroSidebar() {
   const colorApple = useColorModeValue("gray.900", "gray.100")
+  const colorGithub = useColorModeValue("gray.900", "gray.100")
 
   return (
     <Flex direction="column" px={6} py={7} height="100%">
@@ -65,6 +57,8 @@ export function HabaneroSidebar() {
             </Text>
           </Stack>
         </Section>
+
+        <ProjectStatusSection status={HABANERO.status} title={HABANERO.title} />
 
         <Section title="Built With">
           <List spacing={3}>
@@ -99,7 +93,22 @@ export function HabaneroSidebar() {
           </List>
         </Section>
 
-        <ProjectStatusSection status={HABANERO.status} title={HABANERO.title} />
+        <Section title="On the Web">
+          <List spacing={3}>
+            <ListItem>
+              <Link to={HABANERO.url}>
+                <ListIcon as={HABANERO.icon} fontSize={20} width="25px" />
+                Website
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to={HABANERO.repo}>
+                <ListIcon as={FontAwesomeIcon} icon={faGithub} color={colorGithub} fontSize={20} fixedWidth />
+                Source Code
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
       </Stack>
     </Flex>
   )

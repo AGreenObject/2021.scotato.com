@@ -1,16 +1,16 @@
-import { Flex, Stack, Grid, Text, List, ListItem, ListIcon } from "@chakra-ui/react";
+import { Flex, Stack, Text, List, ListItem, ListIcon, useColorModeValue } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactComponent as RedwoodLogo } from "../images/redwood-logo.svg";
 import { ReactComponent as GraphqlLogo } from "../images/graphql-logo.svg";
 import { ReactComponent as FigmaLogo } from "../images/figma-logo.svg";
 import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
-import { faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faNodeJs, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ProjectStatusSection } from '../components/Project'
-import { ExternalLinkButton } from '../components/Button'
 import Card from '../components/Card'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
 import Section from '../components/Section'
+import Link from '../components/Link'
 import GNOMIES from '../projects/GnomiesProject'
 
 export function GnomiesCard() {
@@ -39,20 +39,13 @@ export function GnomiesPage() {
       />
 
       <Gallery images={GNOMIES.gallery} />
-
-      <Grid gridTemplateColumns="1fr 1fr" gridColumnGap={6}>
-       <ExternalLinkButton href={GNOMIES.url} bg="blue.500">
-         Web App
-      </ExternalLinkButton>
-      <ExternalLinkButton href={GNOMIES.repo} bg="gray.500">
-         Source Code
-      </ExternalLinkButton>
-      </Grid>
     </Stack>
   )
 }
 
 export function GnomiesSidebar() {
+  const colorGithub = useColorModeValue("gray.900", "gray.100")
+
   return (
     <Flex direction="column" px={6} py={7} height="100%">
       <Stack spacing={8} mb={8}>
@@ -63,6 +56,8 @@ export function GnomiesSidebar() {
             </Text>
           </Stack>
         </Section>
+
+        <ProjectStatusSection status={GNOMIES.status} title={GNOMIES.title} />
 
         <Section title="Built With">
           <List spacing={3}>
@@ -93,7 +88,22 @@ export function GnomiesSidebar() {
           </List>
         </Section>
 
-        <ProjectStatusSection status={GNOMIES.status} title={GNOMIES.title} />
+        <Section title="On the Web">
+          <List spacing={3}>
+            <ListItem>
+              <Link to={GNOMIES.url}>
+                <ListIcon as={GNOMIES.icon} fontSize={20} width="25px" />
+                Dapp
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link to={GNOMIES.repo}>
+                <ListIcon as={FontAwesomeIcon} icon={faGithub} color={colorGithub} fontSize={20} fixedWidth />
+                Source Code
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
       </Stack>
     </Flex>
   )
