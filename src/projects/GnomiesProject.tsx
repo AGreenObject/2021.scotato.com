@@ -1,9 +1,9 @@
 import { ReactComponent as GnomiesAppIcon } from "../images/gnomies-app-icon.svg"
 import { ReactComponent as GnomiesLogo } from "../images/gnomies-logo.svg"
-import banner from '../images/gnomies-banner.png'
 import { AppIconSmall, AppIconMedium, AppIconLarge } from '../components/AppIcon'
 import { Project, ProjectStatus } from '../components/Project'
-// Gallery
+import { Brand } from '../components/Brand'
+import banner from '../images/gnomies-banner.png'
 import imageOne from '../images/gnomies-gallery-1.png'
 import imageTwo from '../images/gnomies-gallery-2.png'
 import imageThree from '../images/gnomies-gallery-3.png'
@@ -22,6 +22,7 @@ const GNOMIES: Project = {
   iconAlt: 'Gnomies App Icon',
   title: 'Gnomies',
   description: 'Unique collectible NFT avatars powered by Ethereum',
+  summary: 'Mint, Buy, Sell & Trade unique collectible NFT avatars on Ethereum',
   date: 'March 2021',
   url: 'https://gnomies.app',
   repo: 'https://github.com/scotato/gnomies',
@@ -31,6 +32,18 @@ const GNOMIES: Project = {
     imageThree,
     imageFour,
     imageFive,
+  ],
+  tools: [
+    Brand.redwood,
+    Brand.react,
+    Brand.graphql,
+    Brand.nodejs,
+    Brand.figma,
+    Brand.web3,
+  ],
+  resources: [
+    { brand: Brand.gnomies, url: 'https://gnomies.app', text: 'Dapp' },
+    { brand: Brand.github, url: 'https://github.com/scotato/gnomies', text: 'Source Code' },
   ]
 }
 

@@ -5,10 +5,10 @@ import AspectRatio from './AspectRatio'
 import { Link, Grid,  Stack,  Image,  useColorModeValue } from "@chakra-ui/react";
 
 interface GalleryProps {
-  images: string[];
+  images?: string[];
 }
 
-const Gallery = ({ images }: GalleryProps) => {
+const Gallery = ({ images = [] }: GalleryProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const bg = useColorModeValue("white", "gray.900");
   const borderColor = useColorModeValue("gray.200", "gray.700");

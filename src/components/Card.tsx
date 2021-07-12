@@ -7,13 +7,13 @@ import { AppIconIndicator } from './AppIcon'
 import AspectRatio from './AspectRatio'
 
 interface CardProps {
-  image: string;
-  imageAlt: string;
   title: string;
-  description: string;
-  icon: JSX.Element;
-  iconAlt: string;
-  status: ProjectStatus;
+  image?: string;
+  imageAlt?: string;
+  description?: string;
+  icon?: JSX.Element;
+  iconAlt?: string;
+  status?: ProjectStatus;
 }
 
 const Card = (props: CardProps) => {
@@ -31,8 +31,8 @@ const Card = (props: CardProps) => {
           gridColumnGap="16px"
           alignItems="center"
         >
-          <AppIconIndicator status={status}>
-            {icon}
+          <AppIconIndicator status={status ?? ProjectStatus.Development}>
+            {icon ?? <></>}
           </AppIconIndicator>
           <Grid gridTemplateRows="24px 24px" gridRowGap="6px">
             <Heading fontSize={24}>{title}</Heading>

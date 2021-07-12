@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface DetailProps {
   title: string;
-  description: string;
-  icon: JSX.Element;
-  iconAlt: string;
-  status: ProjectStatus
+  description?: string;
+  icon?: JSX.Element;
+  iconAlt?: string;
+  status?: ProjectStatus
 }
 
 const Detail = (props: DetailProps) => {
-  const { title, description, icon, status } = props
+  const { title, description, icon, status = ProjectStatus.Development } = props
   const bg = useColorModeValue("white", "gray.900");
 
   return (
