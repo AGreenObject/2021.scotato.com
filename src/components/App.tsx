@@ -12,6 +12,7 @@ import { GnomiesPage, GnomiesSidebar} from '../pages/Gnomies'
 import { HabaneroPage, HabaneroSidebar } from '../pages/Habanero'
 import { SquirclePage, SquircleSidebar } from '../pages/Squircle'
 import { SleeperPage, SleeperSidebar } from '../pages/Sleeper'
+import { ExperiencePage } from '../pages/Experience'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/habanero" component={HabaneroPage} />
             <Route path="/squircle" component={SquirclePage} />
             <Route path="/sleeper" component={SleeperPage} />
+            <Route path="/experience" component={ExperiencePage} />
             <Route path="/" component={HomePage} />
           </Switch>
         </Main>
@@ -40,6 +42,7 @@ function App() {
             <Route path="/habanero" component={HabaneroSidebar} />
             <Route path="/squircle" component={SquircleSidebar} />
             <Route path="/sleeper" component={SleeperSidebar} />
+            <Route path="/experience" component={HomeSidebar} />
             <Route path="/" component={HomeSidebar} />
           </Switch>
         </Sidebar>
