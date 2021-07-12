@@ -43,7 +43,7 @@ export function SleeperPage() {
 
       <Page>
         <Section title="Overview">
-          <Text>Sleeper was created to experiment with animated SVG shapes using React, and to practice releasing open source products to the public. The first commit was on December 2019, the project was launched on <Link href="https://www.producthunt.com/posts/sleeper">Product Hunt</Link> in April 2020.</Text>
+          <Text>Sleeper was created to experiment with animated SVG shapes using React and to practice releasing open source products to the public. The first commit was on December 2019 and the project was launched on <Link href="https://www.producthunt.com/posts/sleeper">Product Hunt</Link> in April 2020.</Text>
         </Section>
 
         <Section title="Architecture">

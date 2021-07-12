@@ -55,7 +55,7 @@ export function HomeSidebar() {
         <Section title="About">
           <Stack spacing={3}>
             <Text>
-              Hey! I design and build digital products in Portland, Oregon. This site has some of my work.
+              I design and build digital products in Portland, Oregon. This site has some of my work.
             </Text>
 
             <Text>

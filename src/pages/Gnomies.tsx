@@ -56,14 +56,14 @@ export function GnomiesPage() {
         <Section title="Overview">
           <Text>Gnomies is an experiment in community, digital identity, and algorithmically generated artwork. A Gnomie is an <Link to="https://ethereum.org/en/developers/docs/standards/tokens/erc-721/">NFT</Link> that represents stake in a community, can be bought/sold/traded, and can be used as an avatar in that community and on social media.</Text>
           <Text>Each Gnomie is unique and has special qualities such as where they are from, what type of Gnomie they are, the items and equipment they possess, and the rarity of those items.</Text>
-          <Text>Each item has a rarity which is color coded to the item and follows rarity coloring similar to those found in RPGs: <Text as="span" color={colorCommon}>Common</Text>, <Text as="span" color={colorUncommon}>Uncommon</Text>, <Text as="span" color={colorRare}>Rare</Text>, <Text as="span" color={colorEpic}>Epic</Text>, <Text as="span" color={colorLegendary}>Legendary</Text> and <Text as="span" color={colorMythic}>Mythic</Text>. In addition to item rarities, items made of metal follow similar rarity guidelines in the form of: <Text as="span" color={colorCopper}>Copper</Text>, <Text as="span" color={colorSilver}>Silver</Text>, <Text as="span" color={colorGold}>Gold</Text> and <Text as="span" color={colorDiamond}>Diamond</Text></Text>
+          <Text>Each item has a rarity which is color coded to the item and follows rarity coloring similar to those found in RPGs: <Text as="span" color={colorCommon}>Common</Text>, <Text as="span" color={colorUncommon}>Uncommon</Text>, <Text as="span" color={colorRare}>Rare</Text>, <Text as="span" color={colorEpic}>Epic</Text>, <Text as="span" color={colorLegendary}>Legendary</Text> and <Text as="span" color={colorMythic}>Mythic</Text>. In addition to item rarities, items made of metal follow similar rarity guidelines in the form of: <Text as="span" color={colorCopper}>Copper</Text>, <Text as="span" color={colorSilver}>Silver</Text>, <Text as="span" color={colorGold}>Gold</Text> and <Text as="span" color={colorDiamond}>Diamond</Text>.</Text>
           <Text>This project was inspired by the legendary blockchain project <Link to="https://www.larvalabs.com/cryptopunks">CryptoPunks</Link>, a collection of 10,000 unique NFT avatars released in June 2017.</Text>
         </Section>
 
         <Section title="Utility">
-          <Text>One of the many interesting aspects of NFTs is that they can be used as a form of authentication, specifically an individual can verify that they own a Gnomie, which can be used in place of a traditional username and password.</Text>
-          <Text>Following the release of this project, I plan to build and release a companion project that can be used by Gnomie owners. To extend the concept of digital identity, I plan to build a digital wardrobe web app that can view the NFTs contained in your crypto wallet and let you select one to automatically change your avatar on connected apps such as Twitter, Discord, and Steam.</Text>
-          <Text>Beyond the digital wardrobe, the goal is for the project to be directed by the community and Gnomie owners. As the community grows, the value of a Gnomie increases which can be leveraged to develop community voted features.</Text>
+          <Text>One of the many interesting aspects of NFTs is that they can be used as a form of authentication. Specifically an individual can verify that they own a Gnomie, which can be used in place of a traditional username and password.</Text>
+          <Text>Following the release of this project, I plan to build and release a companion project that can be used by Gnomie holders. To extend the concept of digital identity, I plan to build a digital wardrobe web app that can view the NFTs contained in your crypto wallet and let you select one to automatically change your avatar on connected apps such as Twitter, Discord, and Steam.</Text>
+          <Text>Beyond the digital wardrobe, the goal is for the project to be directed by the community and Gnomie holders. As the community grows, the value of a Gnomie increases. Gnomie holders will govern the direction of the project by voting on feature development.</Text>
         </Section>
 
         <Section title="Architecture">
@@ -75,9 +75,9 @@ export function GnomiesPage() {
         </Section>
         
         <Section title="Progress">
-          <Text>Gnomies is close to launching, I have created artwork for 30 different types of Gnomies consisting of ~200 unique artwork assets which expands to ~1400 unique assets when rarity colors are applied. </Text>
-          <Text>The ERC721 solidity contract which allows 10,000 Gnomies to be minted and exchanged has been implemented and tested on a local development blockchain.</Text>
-          <Text>The initial web app that talks to the Gnomies contract and can be used to mint Gnomies has been setup and deployed. There is some additional UI/UX work required before entering production but the minting mechanism and wallet connections are in place.</Text>
+          <Text>Gnomies is close to launching. I have created artwork for 30 different types of Gnomies consisting of ~200 unique artwork assets which expands to ~1400 unique assets when rarity colors are applied. </Text>
+          <Text>The ERC721 solidity contract, which allows 10,000 Gnomies to be minted and exchanged, has been implemented and tested on a local development blockchain.</Text>
+          <Text>The initial web app, minting mechanism and wallet connections have been setup and deployed. Additional UI/UX polishing is required before entering production.</Text>
           <Text>The initial API has been connected to the Gnomies contract and can retrieve and provide information about Gnomies that have been minted.</Text>
           <Text>The next steps are to refine some of the Gnomie metadata, integrate OpenSea, investigate L2 scaling options to reduce gas costs such as Polygon or ZK Rollups, finalize the Web and API packages, and to initiate marketing for the project. The current plan is to offer each Gnomie at 0.01 ETH.</Text>
         </Section>
