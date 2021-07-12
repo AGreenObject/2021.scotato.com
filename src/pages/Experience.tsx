@@ -2,8 +2,8 @@ import { Box, Flex, BoxProps, Stack, Heading, Text } from "@chakra-ui/react";
 import Page from '../components/Page'
 import Section from '../components/Section'
 import { Project } from '../components/Project'
-import { Brand, BrandIcon } from '../components/Brand'
-import { ContractProjects, FullTimeProjects, IndependentProjects } from '../projects/ExperienceProjects'
+import { BrandIcon } from '../components/Brand'
+import { ContractProjects, FullTimeProjects, IndependentProjects, EducationProjects } from '../projects/ExperienceProjects'
 import React from "react";
 
 const Topics = (props: { projects: Project[] }) => {
@@ -58,14 +58,7 @@ export function ExperiencePage() {
       </ExperienceSection>
 
       <ExperienceSection title="Education">
-        <Topic
-          title="University of Alabama at Birmingham"
-          date="August 2007 - May 2011"
-          summary="Graduated in May 2011 with a B.A. in Graphic Design. Studied Graphic Design, Art Direction, Typography, Sculpture, & 2D Design."
-        />
-        <Topic title="CodeSchool" date="June 2014 - June 2015" tools={[Brand.js]} />
-        <Topic title="Codecademy" date="May 2014 - June 2014 " tools={[Brand.js]} />
-        <Topic title="Harvard CS50X" date="January 2014 - April 2014" tools={[Brand.c]} />
+        <Topics projects={EducationProjects} />
       </ExperienceSection>
     </Stack>
   )
