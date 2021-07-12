@@ -41,13 +41,13 @@ export function SquirclePage() {
 
       <Page>
         <Section title="Overview">
-          <Text>A <Link to="https://en.wikipedia.org/wiki/Squircle">squircle</Link> or <Link to="https://en.wikipedia.org/wiki/Superellipse">superellipse</Link> is an intermediate shape between a square and a circle. The difference is subtle, but this shape has a much smoother transition from edge to corner.</Text>
+          <Text>A <Link to="https://en.wikipedia.org/wiki/Squircle">squircle</Link> or <Link to="https://en.wikipedia.org/wiki/Superellipse">superellipse</Link> is an intermediate shape between a square and a circle. The difference is subtle, but this shape has a much smoother transition from edge to corner than a standard rounded rectangle.</Text>
           <Text>When I first learned about this shape, information on how to recreate it was limited, fortunately after a few years the formula started to appear online making it possible to recreate this special shape.</Text>
         </Section>
 
         <Section title="Figma Plugin">
           <Text>The initial Figma plugin was created with vanilla JS and the Figma API in an hour or so during the Figma community beta period. Shortly after releasing the plugin, I updated it to use the Figma design system which was built with Svelte.</Text>
-          <Text>I did not market this product, I needed it and knew others would too. Over 2,000 designers have found and installed this plugin through organic search.</Text>
+          <Text>I didn't publicize this project, I needed it and knew others would too. Over 2,000 designers have found and installed this plugin through organic search.</Text>
         </Section>
 
         <Section title="React Package & Web App">

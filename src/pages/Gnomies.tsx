@@ -7,6 +7,7 @@ import { ReactComponent as EthereumLogo } from "../images/ethereum-logo.svg";
 import { faReact, faNodeJs, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ProjectStatusSection } from '../components/Project'
 import Card from '../components/Card'
+import Page from '../components/Page'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
 import Section from '../components/Section'
@@ -39,6 +40,12 @@ export function GnomiesPage() {
       />
 
       <Gallery images={GNOMIES.gallery} />
+
+      <Page>
+        <Section title="Overview">
+          <Text>gnomies</Text>
+        </Section>
+      </Page>
     </Stack>
   )
 }
