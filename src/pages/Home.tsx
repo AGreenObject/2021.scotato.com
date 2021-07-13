@@ -32,7 +32,7 @@ export function HomePage() {
     <Stack p={[4, 12]} spacing={[4, 12]} mx="auto" maxW={960}>
       <Metadata
         title="@scotato"
-        description="Scott Dodge Software Design & Engineering Showcase"
+        description="Open source digital products built in Portland, Oregon"
         banner="/share-card.png"
         icon="/scotato-digital-avatar-circle.png"
       />

@@ -47,7 +47,7 @@ export function ExperiencePage() {
     <Stack p={[4, 12]} spacing={[4, 6]} mx="auto" maxW={960}>
       <Metadata
         title="Experience"
-        description="Scott Dodge Professional Experience"
+        description="Scott Dodge - Professional Experience"
         banner="/share-card.png"
         icon="/scotato-human-avatar-circle.png"
       />
