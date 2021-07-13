@@ -1,10 +1,10 @@
 import { Box, Flex, BoxProps, Stack, Heading, Text } from "@chakra-ui/react";
-import Page from '../components/Page'
-import Section from '../components/Section'
 import { Project } from '../components/Project'
 import { BrandIcon } from '../components/Brand'
 import { ContractProjects, FullTimeProjects, IndependentProjects, EducationProjects } from '../projects/ExperienceProjects'
-import React from "react";
+import Page from '../components/Page'
+import Section from '../components/Section'
+import Metadata from '../components/Metadata'
 
 const Topics = (props: { projects: Project[] }) => {
   return (
@@ -45,6 +45,13 @@ function ExperienceSection ({ title, children }: ExperienceSectionProps) {
 export function ExperiencePage() {
   return (
     <Stack p={[8, 12]} spacing={[4, 6]} mx="auto" maxW={960}>
+      <Metadata
+        title="Experience"
+        description="Scott Dodge Professional Experience"
+        banner="/share-card.png"
+        icon="/scotato-human-avatar-circle.png"
+      />
+
       <ExperienceSection title="Contract Experience">
         <Topics projects={ContractProjects} />
       </ExperienceSection>

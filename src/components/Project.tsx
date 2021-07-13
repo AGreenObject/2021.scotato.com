@@ -70,7 +70,13 @@ export function ProjectStatusSection ({ status = ProjectStatus.Development, titl
 export function ProjectPage({ project, children, ...props }: ProjectSidebarProps & StackProps) {
   return (
     <Stack p={[8, 12]} spacing={[4, 6]} mx="auto" maxW={960} {...props}>
-      <Metadata {...project} />
+      <Metadata
+        title={project.title}
+        description={project.description ?? ""}
+        banner={project.banner ?? ""}
+        icon={`/${project.id}-app-icon.png`}
+      />
+
       <Detail
         title={project.title}
         description={project.description}

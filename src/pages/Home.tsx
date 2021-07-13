@@ -11,6 +11,7 @@ import { GnomiesCard } from './Gnomies'
 import { HabaneroCard } from './Habanero'
 import { SquircleCard } from './Squircle'
 import { SleeperCard } from './Sleeper'
+import Metadata from '../components/Metadata'
 import Hoverable from '../components/Hoverable'
 import Section from '../components/Section'
 import Link from '../components/Link'
@@ -29,6 +30,13 @@ const AnimatedLink = (props: AnimatedLinkProps) => (
 export function HomePage() {
   return (
     <Stack p={[8, 12]} spacing={[4, 12]} mx="auto" maxW={960}>
+      <Metadata
+        title="@scotato"
+        description="Scott Dodge Software Design & Engineering Showcase"
+        banner="/share-card.png"
+        icon="/scotato-digital-avatar-circle.png"
+      />
+
       <AnimatedLink to="/gnomies">
         <GnomiesCard />
       </AnimatedLink>
