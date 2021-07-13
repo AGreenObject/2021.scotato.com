@@ -35,7 +35,7 @@ interface ExperienceSectionProps {
 function ExperienceSection ({ title, children }: ExperienceSectionProps) {
   return (
     <Page>
-      <Section title={title} titleSize={[28, 32]} spacing={8}>
+      <Section title={title} titleSize={28} spacing={8}>
         {children}
       </Section>
     </Page>
