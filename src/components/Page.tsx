@@ -6,7 +6,7 @@ const Page = (props: StackProps) => {
 
   return (
     <SquircleMask p1={8} p2={48}>
-      <Stack bg={bg} p={8} spacing={8} fontSize={20} {...props} />
+      <Stack bg={bg} p={[6, 8]} spacing={8} fontSize={20} {...props} />
     </SquircleMask>
   );
 };

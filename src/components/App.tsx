@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, BoxProps, useColorModeValue } from "@chakra-ui/react";
 import Layout from "./Layout";
 import Sidebar from "./Sidebar";
-import Introduction from "./Introduction";
+import CreatorDetails from "./CreatorDetails";
 import Navigation from "./Navigation";
 import Actions from "./Actions";
 import ScrollToTop from "./ScrollToTop";
@@ -20,9 +19,9 @@ function App() {
       <ScrollToTop />
       <Layout>
         <Sidebar>
-          <Introduction />
+          <CreatorDetails />
           <Navigation />
-          <Actions />
+          <Actions display={['none', 'flex']} />
         </Sidebar>
 
         <Main>
@@ -45,19 +44,18 @@ function App() {
             <Route path="/experience" component={HomeSidebar} />
             <Route path="/" component={HomeSidebar} />
           </Switch>
+          <Actions display={['flex', 'none']} />
         </Sidebar>
       </Layout>
     </Router>
   );
 }
 
-function Main ({ children }: { children: ReactNode }) {
+function Main (props: BoxProps) {
   const bg = useColorModeValue("gray.100", "gray.800");
   
   return (
-    <Box as="main" bg={bg}>
-      {children}
-    </Box>
+    <Box as="main" bg={bg} {...props} />
   )
 }
 

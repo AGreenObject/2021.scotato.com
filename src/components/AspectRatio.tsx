@@ -6,7 +6,7 @@ interface AspectRatioProps {
   ratio?: number;
 }
 
-const AspectRatio = ({ ratio = 2 / 1, ...props }: AspectRatioProps & BoxProps) => {
+const AspectRatio = ({ ratio = 1, children, ...props }: AspectRatioProps & BoxProps) => {
   const bg = useColorModeValue("gray.200", "gray.700");
   const iconColor = useColorModeValue("gray.300", "gray.600");
 
@@ -18,10 +18,11 @@ const AspectRatio = ({ ratio = 2 / 1, ...props }: AspectRatioProps & BoxProps) =
       paddingBottom={`${1 / ratio * 100}%`}
       color={iconColor}
       bg={bg}
+      width="100%"
       {...props}
     >
       <Box position="absolute">
-        <FontAwesomeIcon icon={faImage} size="2x" />
+        {children || <FontAwesomeIcon icon={faImage} size="2x" />}
       </Box>
     </Box>
   );

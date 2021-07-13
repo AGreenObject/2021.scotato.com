@@ -29,7 +29,7 @@ const AnimatedLink = (props: AnimatedLinkProps) => (
 
 export function HomePage() {
   return (
-    <Stack p={[8, 12]} spacing={[4, 12]} mx="auto" maxW={960}>
+    <Stack p={[4, 12]} spacing={[4, 12]} mx="auto" maxW={960}>
       <Metadata
         title="@scotato"
         description="Scott Dodge Software Design & Engineering Showcase"

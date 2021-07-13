@@ -75,4 +75,18 @@ export function LinkButton(props: ButtonProps & RouterLinkProps) {
   );
 }
 
+export function LinkButtonBasic(props: ButtonProps & RouterLinkProps) {
+  return (
+    <Button
+      as={RouterLink}
+      borderRadius={0}
+      bg="transparent"
+      width="100%"
+      _focus={{ bg: 'transparent' }}
+      _hover={{ bg: 'transparent' }}
+      {...props}
+    />
+  );
+}
+
 export default SquircleButton;

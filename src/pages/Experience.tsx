@@ -35,7 +35,7 @@ interface ExperienceSectionProps {
 function ExperienceSection ({ title, children }: ExperienceSectionProps) {
   return (
     <Page>
-      <Section title={title} titleSize={32} spacing={8}>
+      <Section title={title} titleSize={[28, 32]} spacing={8}>
         {children}
       </Section>
     </Page>
@@ -44,7 +44,7 @@ function ExperienceSection ({ title, children }: ExperienceSectionProps) {
 
 export function ExperiencePage() {
   return (
-    <Stack p={[8, 12]} spacing={[4, 6]} mx="auto" maxW={960}>
+    <Stack p={[4, 12]} spacing={[4, 6]} mx="auto" maxW={960}>
       <Metadata
         title="Experience"
         description="Scott Dodge Professional Experience"

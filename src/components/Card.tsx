@@ -34,11 +34,11 @@ const Card = (props: CardProps) => {
           <AppIconIndicator status={status ?? ProjectStatus.Development}>
             {icon ?? <></>}
           </AppIconIndicator>
-          <Grid gridTemplateRows="24px 24px" gridRowGap="6px">
+          <Grid>
             <Heading fontSize={24}>{title}</Heading>
-            <Text>{description}</Text>
+            <Text lineHeight="1.2">{description}</Text>
           </Grid>
-          <Box color={arrowColor} fontSize={32} px={4}>
+          <Box display={['none', 'block']} color={arrowColor} fontSize={32} px={4}>
             <FontAwesomeIcon icon={faChevronRight} />
           </Box>
         </Grid>

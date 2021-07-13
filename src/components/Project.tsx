@@ -69,7 +69,7 @@ export function ProjectStatusSection ({ status = ProjectStatus.Development, titl
 
 export function ProjectPage({ project, children, ...props }: ProjectSidebarProps & StackProps) {
   return (
-    <Stack p={[8, 12]} spacing={[4, 6]} mx="auto" maxW={960} {...props}>
+    <Stack p={[4, 12]} spacing={[4, 6]} mx="auto" maxW={960} {...props}>
       <Metadata
         title={project.title}
         description={project.description ?? ""}
@@ -93,7 +93,7 @@ export function ProjectPage({ project, children, ...props }: ProjectSidebarProps
 
 export function ProjectSidebar({ project, children, ...props }: ProjectSidebarProps & StackProps) {
   return (
-    <Flex direction="column" px={6} py={7} height="100%">
+    <Flex direction="column" px={6} py={7} pb={[0, 7]} height="100%">
       <Stack spacing={8} mb={8} {...props}>
         <Section title="About">
           <Stack spacing={3}>

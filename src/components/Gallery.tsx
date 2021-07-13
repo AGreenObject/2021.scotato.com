@@ -21,8 +21,8 @@ const Gallery = ({ images = [] }: GalleryProps) => {
           <Image bg="gray.500" src={activeImage} fallback={<AspectRatio ratio={1280 / 800} />} />
         </Link>
         <Grid
-          p={4}
-          gridColumnGap="16px"
+          p={[2, 4]}
+          gridColumnGap={[2, 8]}
           alignItems="center"
           gridAutoColumns="1fr"
           gridAutoFlow="column"

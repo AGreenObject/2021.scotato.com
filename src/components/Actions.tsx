@@ -1,5 +1,6 @@
 import {
   Stack,
+  StackProps,
   IconButton,
   useColorMode,
   useColorModeValue,
@@ -20,7 +21,7 @@ import Hoverable from './Hoverable'
 const MoonIcon = () => <FontAwesomeIcon icon={faMoon} />
 const SunIcon = () => <FontAwesomeIcon icon={faSun} />
 
-export const Actions = () => {
+export const Actions = (props: StackProps) => {
   const { toggleColorMode } = useColorMode();
   const colorModeIcon = useColorModeValue(<MoonIcon />, <SunIcon />);
   const colorModeLabel = useColorModeValue("Dark Mode", "Light Mode");
@@ -37,6 +38,7 @@ export const Actions = () => {
       color={color}
       sx={{ path: { fill: "currentColor" } }}
       mt="auto"
+      {...props}
     >
       <Hoverable whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
         <IconButton

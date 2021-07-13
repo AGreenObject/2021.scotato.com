@@ -20,16 +20,16 @@ const Detail = (props: DetailProps) => {
       <Stack spacing={0} bg={bg} flexGrow={1}>
         <Grid
           p={4}
-          gridTemplateColumns="64px 1fr auto"
+          gridTemplateColumns={["64px 1fr",  "64px 1fr auto"]}
           gridColumnGap="16px"
           alignItems="center"
         >
           {icon}
-          <Grid gridTemplateRows="24px 24px" gridRowGap="6px">
+          <Grid>
             <Heading fontSize={24}>{title}</Heading>
-            <Text>{description}</Text>
+            <Text lineHeight="1.2">{description}</Text>
           </Grid>
-          <Box color={colorForStatus(status)} fontSize={32} px={4}>
+          <Box display={['none', 'block']} color={colorForStatus(status)} fontSize={32} px={4}>
             <FontAwesomeIcon icon={iconForStatus(status)} fixedWidth />
           </Box>
         </Grid>
