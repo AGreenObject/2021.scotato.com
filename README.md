@@ -1,4 +1,4 @@
-# Portfolio Website for Scott Dodge
+# Digital Product Portfolio
 This project was bootstrapped with create react app
 
 ## Available Scripts
