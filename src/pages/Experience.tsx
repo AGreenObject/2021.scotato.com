@@ -44,7 +44,7 @@ function ExperienceSection ({ title, children }: ExperienceSectionProps) {
 
 export function ExperiencePage() {
   return (
-    <Stack p={[4, 12]} spacing={[4, 6]} mx="auto" maxW={960}>
+    <Stack p={[4, 12]} spacing={[4, 6]} mx="auto" maxW={1024}>
       <Metadata
         title="Experience"
         description="Scott Dodge - Professional Experience"

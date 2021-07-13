@@ -29,7 +29,7 @@ const AnimatedLink = (props: AnimatedLinkProps) => (
 
 export function HomePage() {
   return (
-    <Stack p={[4, 12]} spacing={[4, 12]} mx="auto" maxW={960}>
+    <Stack p={[4, 12]} spacing={[4, 12]} mx="auto" maxW={1024}>
       <Metadata
         title="@scotato"
         description="Open source digital products built in Portland, Oregon"
