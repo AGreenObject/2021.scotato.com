@@ -93,7 +93,7 @@ export const EducationProjects: Project[] = [
   {
     title: "CodeSchool",
     date: "June 2014 - June 2015",
-    summary: "Online advanced courses for JavaScript & Web Development covering closures, hoisting, funcitonal programming, DOM events and progressive Web Apps",
+    summary: "Online advanced courses for JavaScript & Web Development covering closures, hoisting, functional programming, DOM events and progressive Web Apps",
     tools: [Brand.js, Brand.html, Brand.css],
   },
   {
