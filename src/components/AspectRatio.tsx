@@ -6,7 +6,7 @@ interface AspectRatioProps {
   ratio?: number;
 }
 
-const AspectRatio = ({ ratio = 1, children, ...props }: AspectRatioProps & BoxProps) => {
+const AspectRatio = ({ ratio = 2 / 1, children, ...props }: AspectRatioProps & BoxProps) => {
   const bg = useColorModeValue("gray.200", "gray.700");
   const iconColor = useColorModeValue("gray.300", "gray.600");
 
