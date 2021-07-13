@@ -13,7 +13,6 @@ const theme = extendTheme({
       "html, body": {
         bg: mode("white", "gray.900")(props),
         height: '100%',
-        overflowX: 'hidden'
       },
     }),
   },
