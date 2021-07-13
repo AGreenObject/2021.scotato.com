@@ -22,7 +22,7 @@ const Gallery = ({ images = [] }: GalleryProps) => {
         </Link>
         <Grid
           p={[2, 4]}
-          gridColumnGap={[2, 8]}
+          gridColumnGap={[2, 4]}
           alignItems="center"
           gridAutoColumns="1fr"
           gridAutoFlow="column"

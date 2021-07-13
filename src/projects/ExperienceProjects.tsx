@@ -88,24 +88,24 @@ export const EducationProjects: Project[] = [
   {
     title: "University of Alabama at Birmingham",
     date: "August 2007 - May 2011",
-    summary: "Graduated in May 2011 with a B.A. in Graphic Design. Studied Graphic Design, Art Direction, Typography, Sculpture, & 2D Design.",
+    summary: "Graduated in May 2011 with a B.A. in Graphic Design. Studied Graphic Design, Art Direction, Typography, Sculpture, & 2D Design",
   },
   {
     title: "CodeSchool",
     date: "June 2014 - June 2015",
-    summary: "Online advanced courses for JavaScript & Web Development. Topics included closures, hoisting, funcitonal programming, DOM events and progressive Web Apps.",
+    summary: "Online advanced courses for JavaScript & Web Development covering closures, hoisting, funcitonal programming, DOM events and progressive Web Apps",
     tools: [Brand.js, Brand.html, Brand.css],
   },
   {
     title: "Codecademy",
     date: "May 2014 - June 2014",
-    summary: "Online courses for JavaScript & PHP. Topics included data structures, functions, loops, control flow, events and APIs.",
+    summary: "Online courses for JavaScript & PHP covering data structures, functions, loops, control flow, events and APIs",
     tools: [Brand.js, Brand.html, Brand.css],
   },
   {
     title: "Harvard CS50X",
     date: "January 2014 - April 2014",
-    summary: "Online introduction to computer science and the art of programming. Topics included abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming.",
+    summary: "Online introduction to computer science and the art of programming covering abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web programming",
     tools: [Brand.c, Brand.js, Brand.html, Brand.css],
   }
 ]

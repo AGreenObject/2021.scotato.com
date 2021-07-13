@@ -20,13 +20,13 @@ export function GnomiesPage() {
     <ProjectPage project={GNOMIES}>
       <Section title="Overview">
         <Text>Gnomies is an experiment in community, digital identity, and algorithmically generated artwork. A Gnomie is an <Link to="https://ethereum.org/en/developers/docs/standards/tokens/erc-721/">NFT</Link> that represents stake in a community, can be bought/sold/traded, and can be used as an avatar in that community and on social media.</Text>
-        <Text>Each Gnomie is unique and has special qualities such as where they are from, what type of Gnomie they are, the items and equipment they possess, and the rarity of those items.</Text>
+        <Text>Each Gnomie is unique and has special qualities such as where they are from, what type of Gnomie they are, the items and equipment they possess and the rarity of those items.</Text>
         <Text>Each item has a rarity which is color coded to the item and follows rarity coloring similar to those found in RPGs: <Text as="span" color={colorCommon}>Common</Text>, <Text as="span" color={colorUncommon}>Uncommon</Text>, <Text as="span" color={colorRare}>Rare</Text>, <Text as="span" color={colorEpic}>Epic</Text>, <Text as="span" color={colorLegendary}>Legendary</Text> and <Text as="span" color={colorMythic}>Mythic</Text>. In addition to item rarities, items made of metal follow similar rarity guidelines in the form of: <Text as="span" color={colorCopper}>Copper</Text>, <Text as="span" color={colorSilver}>Silver</Text>, <Text as="span" color={colorGold}>Gold</Text> and <Text as="span" color={colorDiamond}>Diamond</Text>.</Text>
         <Text>This project was inspired by the legendary blockchain project <Link to="https://www.larvalabs.com/cryptopunks">CryptoPunks</Link>, a collection of 10,000 unique NFT avatars released in June 2017.</Text>
       </Section>
 
       <Section title="Utility">
-        <Text>One of the many interesting aspects of NFTs is that they can be used as a form of authentication. Specifically an individual can verify that they own a Gnomie, which can be used in place of a traditional username and password.</Text>
+        <Text>One of the many interesting aspects of NFTs is that they can be used as a form of authentication. Specifically, an individual can verify that they own a Gnomie, which can be used in place of a traditional username and password.</Text>
         <Text>Following the release of this project, I plan to build and release a companion project that can be used by Gnomie holders. To extend the concept of digital identity, I plan to build a digital wardrobe web app that can view the NFTs contained in your crypto wallet and let you select one to automatically change your avatar on connected apps such as Twitter, Discord, and Steam.</Text>
         <Text>Beyond the digital wardrobe, the goal is for the project to be directed by the community and Gnomie holders. As the community grows, the value of a Gnomie increases. Gnomie holders will govern the direction of the project by voting on feature development.</Text>
       </Section>
