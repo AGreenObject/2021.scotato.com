@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Box, Stack, Heading, Text, Avatar } from "@chakra-ui/react";
+import { Stack, Heading, Text, Avatar } from "@chakra-ui/react";
 import { LinkButtonBasic } from "./Button";
 import Coin, { CoinProps } from './Coin'
 import Hoverable from './Hoverable'
