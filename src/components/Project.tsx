@@ -9,6 +9,7 @@ import Card from '../components/Card'
 import Page from '../components/Page'
 import Detail from '../components/Detail'
 import Gallery from '../components/Gallery'
+import Metadata from '../components/Metadata'
 
 export type Project = {
   id?: string;
@@ -69,6 +70,7 @@ export function ProjectStatusSection ({ status = ProjectStatus.Development, titl
 export function ProjectPage({ project, children, ...props }: ProjectSidebarProps & StackProps) {
   return (
     <Stack p={[8, 12]} spacing={[4, 6]} mx="auto" maxW={960} {...props}>
+      <Metadata {...project} />
       <Detail
         title={project.title}
         description={project.description}
